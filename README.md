@@ -10,7 +10,7 @@
     cd target
 ```
 ```    
-    java -jar artifact-1.0-SNAPSHOT.war
+    java -jar artifact-0.0.1-SNAPSHOT.war
 ```
 
 ### API Endpoint
