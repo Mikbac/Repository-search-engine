@@ -15,36 +15,34 @@ public class RepositoryData {
         String url;
         String data;
         JSONArray jsonArr;
-        int pagesNumber = 10;
-        while (pagesNumber < 500) {
-            url = "https://api.github.com/users/" + username + "/events?per_page=" + pagesNumber;
-            data = readUrl(url);
+        int pagesNumber = 1000;
 
-            jsonArr = new JSONArray(data);
+        url = "https://api.github.com/users/" + username + "/events?per_page=" + pagesNumber;
+        data = readUrl(url);
 
-            for (int i = 0; i < jsonArr.length(); i++) {
-                JSONObject jsonObj = jsonArr.getJSONObject(i);
-                if (jsonObj.get("type").equals("PushEvent") || jsonObj.get("type").equals("CreateEvent")) {
+        jsonArr = new JSONArray(data);
 
-                    Repository repository = new Repository();
-                    String repositoryName;
+        for (int i = 0; i < jsonArr.length(); i++) {
+            JSONObject jsonObj = jsonArr.getJSONObject(i);
+            if (jsonObj.get("type").equals("PushEvent") || jsonObj.get("type").equals("CreateEvent")) {
 
-                    String repositoryUrl = jsonObj.getJSONObject("repo").get("url").toString();
+                Repository repository = new Repository();
+                String repositoryName;
 
-                    repositoryName = repositoryUrl.substring(30 + username.length());
+                String repositoryUrl = jsonObj.getJSONObject("repo").get("url").toString();
 
-                    repository.setRepositoryName(repositoryName);
+                repositoryName = repositoryUrl.substring(30 + username.length());
 
-                    System.out.println(jsonObj.get("type"));
-                    System.out.println(repositoryName);
-                    System.out.println(pagesNumber);
+                repository.setRepositoryName(repositoryName);
 
-                    return repository;
-                }
+                System.out.println(jsonObj.get("type"));
+                System.out.println(repositoryName);
+                System.out.println(pagesNumber);
+
+                return repository;
             }
-
-            pagesNumber += 10;
         }
+
 
         return null;
     }
