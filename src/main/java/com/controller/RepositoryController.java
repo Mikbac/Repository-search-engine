@@ -19,15 +19,17 @@ public class RepositoryController {
     @RequestMapping(value = "user/{username}/repository", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Repository getLastModifiedRepository(@PathVariable String username) throws Exception {
         try {
+            Repository repository;
+            repository = RepositoryData.getRepository(username);
 
-            return RepositoryData.getRepository(username);
-
+            if (repository != null) {
+                return repository;
+            } else {
+                throw new InvalidUsernameException();
+            }
         } catch (IOException e) {
             throw new ApiRateLimitException();
-        } catch (Exception e) {
-            throw new InvalidUsernameException();
         }
-
     }
 
 
