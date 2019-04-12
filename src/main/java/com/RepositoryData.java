@@ -10,15 +10,16 @@ import java.net.URL;
 
 public class RepositoryData {
 
-    public static Repository getRepository(String userName) throws Exception {
+    public static Repository getRepository(String username) throws Exception {
 
         String url;
         String data;
         JSONArray jsonArr;
         int pagesNumber = 10;
-        while (true) {
-            url = "https://api.github.com/users/" + userName + "/events?per_page=" + pagesNumber;
+        while (pagesNumber < 500) {
+            url = "https://api.github.com/users/" + username + "/events?per_page=" + pagesNumber;
             data = readUrl(url);
+
             jsonArr = new JSONArray(data);
 
             for (int i = 0; i < jsonArr.length(); i++) {
@@ -30,7 +31,7 @@ public class RepositoryData {
 
                     String repositoryUrl = jsonObj.getJSONObject("repo").get("url").toString();
 
-                    repositoryName = repositoryUrl.substring(30 + userName.length());
+                    repositoryName = repositoryUrl.substring(30 + username.length());
 
                     repository.setRepositoryName(repositoryName);
 
@@ -45,12 +46,14 @@ public class RepositoryData {
             pagesNumber += 10;
         }
 
+        return null;
     }
 
-    private static String readUrl(String urlString) throws Exception {
+    private static String readUrl(String webAddress) throws Exception {
         BufferedReader reader = null;
         try {
-            URL url = new URL(urlString);
+            URL url = new URL(webAddress);
+
             reader = new BufferedReader(new InputStreamReader(url.openStream()));
             StringBuffer buffer = new StringBuffer();
             int read;
