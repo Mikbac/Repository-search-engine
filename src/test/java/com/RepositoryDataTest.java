@@ -9,30 +9,30 @@ import static org.junit.Assert.assertNotNull;
 public class RepositoryDataTest {
 
     @Test
-    public void getRepositoryWhenUsernameIsMikBac() throws Exception {
+    public void getRepositoryWhenUsernameIsAllegro() throws Exception {
 
         Repository repository;
-        repository = RepositoryData.getRepository("MikBac");
+        repository = RepositoryData.getRepository("Allegro");
 
         assertNotNull(repository);
 
     }
 
     @Test
-    public void getRepositoryWhenUsernameIsmikbac() throws Exception {
+    public void getRepositoryWhenUsernameIsallegro() throws Exception {
 
         Repository repository;
-        repository = RepositoryData.getRepository("mikbac");
+        repository = RepositoryData.getRepository("allegro");
 
         assertNotNull(repository);
 
     }
 
     @Test
-    public void getRepositoryWhenUsernameIsMIKBAC() throws Exception {
+    public void getRepositoryWhenUsernameIsALLEGRO() throws Exception {
 
         Repository repository;
-        repository = RepositoryData.getRepository("MIKBAC");
+        repository = RepositoryData.getRepository("ALLEGRO");
 
         assertNotNull(repository);
 

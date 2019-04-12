@@ -27,25 +27,25 @@ public class RepositoryControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    public void getRepositoryWhenUsernameIsMikBac() throws Exception {
+    public void getRepositoryWhenUsernameIsAllegro() throws Exception {
 
-        this.mockMvc.perform(get("/user/MikBac/repository"))
+        this.mockMvc.perform(get("/user/Allegro/repository"))
                 .andExpect(status().isOk());
 
     }
 
     @Test
-    public void getRepositoryWhenUsernameIsmikbac() throws Exception {
+    public void getRepositoryWhenUsernameIsallegro() throws Exception {
 
-        this.mockMvc.perform(get("/user/mikbac/repository"))
+        this.mockMvc.perform(get("/user/allegro/repository"))
                 .andExpect(status().isOk());
 
     }
 
     @Test
-    public void getRepositoryWhenUsernameIsMIKBAC() throws Exception {
+    public void getRepositoryWhenUsernameIsALLEGRO() throws Exception {
 
-        this.mockMvc.perform(get("/user/MIKBAC/repository"))
+        this.mockMvc.perform(get("/user/ALLEGRO/repository"))
                 .andExpect(status().isOk());
 
     }
