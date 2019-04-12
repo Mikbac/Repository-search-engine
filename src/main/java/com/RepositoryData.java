@@ -15,34 +15,36 @@ public class RepositoryData {
         String url;
         String data;
         JSONArray jsonArr;
-        int pagesNumber = 1000;
+        int pagesNumber = 40;
+        while (pagesNumber < 80) {
+            url = "https://api.github.com/users/" + username + "/events?per_page=" + pagesNumber;
+            data = readUrl(url);
 
-        url = "https://api.github.com/users/" + username + "/events?per_page=" + pagesNumber;
-        data = readUrl(url);
+            jsonArr = new JSONArray(data);
 
-        jsonArr = new JSONArray(data);
+            for (int i = 0; i < jsonArr.length(); i++) {
+                JSONObject jsonObj = jsonArr.getJSONObject(i);
+                if (jsonObj.get("type").equals("PushEvent") || jsonObj.get("type").equals("CreateEvent")) {
 
-        for (int i = 0; i < jsonArr.length(); i++) {
-            JSONObject jsonObj = jsonArr.getJSONObject(i);
-            if (jsonObj.get("type").equals("PushEvent") || jsonObj.get("type").equals("CreateEvent")) {
+                    Repository repository = new Repository();
+                    String repositoryName;
 
-                Repository repository = new Repository();
-                String repositoryName;
+                    String repositoryUrl = jsonObj.getJSONObject("repo").get("url").toString();
 
-                String repositoryUrl = jsonObj.getJSONObject("repo").get("url").toString();
+                    repositoryName = repositoryUrl.substring(30 + username.length());
 
-                repositoryName = repositoryUrl.substring(30 + username.length());
+                    repository.setRepositoryName(repositoryName);
 
-                repository.setRepositoryName(repositoryName);
+                    System.out.println(jsonObj.get("type"));
+                    System.out.println(repositoryName);
+                    System.out.println(pagesNumber);
 
-                System.out.println(jsonObj.get("type"));
-                System.out.println(repositoryName);
-                System.out.println(pagesNumber);
-
-                return repository;
+                    return repository;
+                }
             }
-        }
 
+            pagesNumber += 40;
+        }
 
         return null;
     }
