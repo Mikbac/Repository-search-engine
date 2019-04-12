@@ -15,8 +15,8 @@ public class RepositoryData {
         String url;
         String data;
         JSONArray jsonArr;
-        int pagesNumber = 50;
-        while (pagesNumber < 500) {
+        int pagesNumber = 100;
+        while (pagesNumber < 300) {
             url = "https://api.github.com/users/" + username + "/events?per_page=" + pagesNumber;
             data = readUrl(url);
 
@@ -43,7 +43,7 @@ public class RepositoryData {
                 }
             }
 
-            pagesNumber += 50;
+            pagesNumber += 100;
         }
 
         return null;
