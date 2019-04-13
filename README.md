@@ -19,8 +19,8 @@
 |---|---|---|
 |GET /user/{userName}/repository|return the name of the last modified repository|{userName} - repository owner|
 
-#### An example: 
-####```GET /user/Allegro/repository```
+### An example: 
+#### ```GET /user/Allegro/repository```
 
 ### Built With
 
