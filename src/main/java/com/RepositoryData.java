@@ -35,10 +35,6 @@ public class RepositoryData {
 
                     repository.setRepositoryName(repositoryName);
 
-                    System.out.println(jsonObj.get("type"));
-                    System.out.println(repositoryName);
-                    System.out.println(pagesNumber);
-
                     return repository;
                 }
             }
@@ -55,7 +51,7 @@ public class RepositoryData {
             URL url = new URL(webAddress);
 
             reader = new BufferedReader(new InputStreamReader(url.openStream()));
-            StringBuffer buffer = new StringBuffer();
+            StringBuilder buffer = new StringBuilder();
             int read;
             char[] chars = new char[1024];
             while ((read = reader.read(chars)) != -1)
