@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/Mikbac/Searcher-last-updated-repository.svg?branch=master)](https://travis-ci.org/Mikbac/Searcher-last-updated-repository)
+[![Build Status](https://travis-ci.org/Mikbac/Repository-search-engine.svg?branch=master)](https://travis-ci.org/Mikbac/Repository-search-engine)
 
-# Last updated repository
+# Search engine of the last updated user repository.
 
 ### Installing
 ```
@@ -19,7 +19,8 @@
 |---|---|---|
 |GET /user/{userName}/repository|return the name of the last modified repository|{userName} - repository owner|
 
-#### An example: ```/user/Allegro/repository```
+#### An example: 
+####```GET /user/Allegro/repository```
 
 ### Built With
 
@@ -28,5 +29,9 @@
 * [Spring Boot](https://spring.io/projects/spring-boot) 
 
 * [Maven](https://maven.apache.org/)
+
+* [HSQLDB](http://hsqldb.org/)
+
+* [JUnit 4](https://junit.org/junit4/)
 
 The server uses the [GitHub REST API](https://developer.github.com/v3/) . 
