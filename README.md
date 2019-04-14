@@ -12,6 +12,10 @@
 ```    
     java -jar artifact-0.0.1-SNAPSHOT.war
 ```
+Open the browser and hit 
+```
+http://localhost:8080/user/Allegro/repository
+```
 
 ### API Endpoint
 
