@@ -17,7 +17,7 @@ public class WebAppApplicationTest {
     RepositoryController repositoryController;
 
     @Test
-    public void contextLoads() throws Exception {
+    public void contextLoads(){
         assertThat(repositoryController).isNotNull();
     }
 
