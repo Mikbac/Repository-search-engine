@@ -9,11 +9,11 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Repository {
+public class Organization {
 
-    @JsonProperty("name")
-    private String repositoryName;
+    @JsonProperty("login")
+    String name;
 
-    @JsonProperty("pushed_at")
-    private String lastUpdate;
+    @JsonProperty("public_repos")
+    int numberOfRepositories;
 }

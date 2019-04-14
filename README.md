@@ -14,17 +14,17 @@
 ```
 Open the browser and hit 
 ```
-http://localhost:8080/user/Allegro/repository
+http://localhost:8080/user/Allegro/last-modified-repository
 ```
 
 ### API Endpoint
 
 |Endpoints|Usage|Params|
 |---|---|---|
-|GET /user/{userName}/repository|return the name of the last modified repository|{userName} - repository owner|
+|GET /user/{userName}/last-modified-repository|return the name of the last modified repository|{userName} - repository owner|
 
 ### An example: 
-#### ```GET /user/Allegro/repository```
+#### ```GET /user/Allegro/last-modified-repository```
 
 ### Built With
 
