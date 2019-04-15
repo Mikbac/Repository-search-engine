@@ -21,7 +21,7 @@ http://localhost:8080/organization/Allegro/last-modified-repository
 
 |Endpoints|Usage|Params|
 |---|---|---|
-|GET /organization/{userName}/last-modified-repository|return the name of the last modified repository|{userName} - repository owner|
+|GET /organization/{organizationName}/last-modified-repository|return the name of the last modified repository|{organizationName} - repository owner|
 
 ### An example: 
 #### ```GET /organization/Allegro/last-modified-repository```
