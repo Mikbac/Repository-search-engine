@@ -11,7 +11,7 @@ import java.util.List;
 
 public class DateSupport {
 
-    public static Repository findLatestDate(List<Repository> repositories, String dateString) {
+    public static Repository findLatestDate(List<Repository> repositories) {
         LocalDateTime latestDate;
         Repository latestRepository;
 
@@ -37,6 +37,5 @@ public class DateSupport {
 
         return date;
     }
-
 
 }

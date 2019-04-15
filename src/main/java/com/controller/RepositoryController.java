@@ -8,6 +8,7 @@ import com.service.RepositoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpStatusCodeException;
 
 import java.io.IOException;
 
@@ -24,11 +25,11 @@ public class RepositoryController {
     }
 
 
-    @RequestMapping(value = "user/{username}/last-modified-repository", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "organization/{username}/last-modified-repository", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Repository getLastModifiedRepository(@PathVariable String username) {
         try {
             return repositoryService.getLastUpdatedRepository(username);
-        } catch (IOException e) {
+        } catch (HttpStatusCodeException e) {
             throw new ApiRateLimitException();
         } catch (Exception e) {
             throw new InvalidUsernameException();

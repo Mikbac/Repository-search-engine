@@ -25,7 +25,7 @@ public class RepositoryServiceImp implements RepositoryService {
         repositories = getAllRepositories(username);
 
         Repository repository;
-        repository = DateSupport.findLatestDate(repositories, username);
+        repository = DateSupport.findLatestDate(repositories);
 
         return repository;
     }

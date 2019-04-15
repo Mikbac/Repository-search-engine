@@ -1,4 +1,4 @@
-package com;
+package com.controller;
 
 import com.controller.RepositoryController;
 import com.service.RepositoryService;

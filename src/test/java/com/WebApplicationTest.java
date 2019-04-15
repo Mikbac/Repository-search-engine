@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class WebAppApplicationTest {
+public class WebApplicationTest {
 
     @Autowired
     RepositoryController repositoryController;
