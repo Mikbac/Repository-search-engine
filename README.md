@@ -38,4 +38,6 @@ http://localhost:8080/organization/Allegro/last-modified-repository
 
 * [JUnit 4](https://junit.org/junit4/)
 
+* [Swagger 2](https://swagger.io/)
+
 The server uses the [GitHub REST API](https://developer.github.com/v3/) . 

@@ -2,15 +2,13 @@ package com.controller;
 
 
 import com.exception.ApiRateLimitException;
-import com.exception.InvalidUsernameException;
+import com.exception.SomethingException;
 import com.model.Repository;
 import com.service.RepositoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpStatusCodeException;
-
-import java.io.IOException;
 
 
 @CrossOrigin
@@ -32,7 +30,8 @@ public class RepositoryController {
         } catch (HttpStatusCodeException e) {
             throw new ApiRateLimitException();
         } catch (Exception e) {
-            throw new InvalidUsernameException();
+            e.printStackTrace();
+            throw new SomethingException();
         }
 
     }
