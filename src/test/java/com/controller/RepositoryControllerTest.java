@@ -29,7 +29,7 @@ public class RepositoryControllerTest {
     @Test
     public void getRepositoryWhenUsernameIsAllegro() throws Exception {
 
-        this.mockMvc.perform(get("/user/Allegro/last-modified-repository").contentType(APPLICATION_JSON))
+        this.mockMvc.perform(get("/organization/Allegro/last-modified-repository").contentType(APPLICATION_JSON))
                 .andExpect(status().isOk());
 
     }
@@ -37,7 +37,7 @@ public class RepositoryControllerTest {
     @Test
     public void getRepositoryWhenUsernameIsallegro() throws Exception {
 
-        this.mockMvc.perform(get("/user/allegro/last-modified-repository").contentType(APPLICATION_JSON))
+        this.mockMvc.perform(get("/organization/allegro/last-modified-repository").contentType(APPLICATION_JSON))
                 .andExpect(status().isOk());
 
     }
@@ -45,7 +45,7 @@ public class RepositoryControllerTest {
     @Test
     public void getRepositoryWhenUsernameIsALLEGRO() throws Exception {
 
-        this.mockMvc.perform(get("/user/ALLEGRO/last-modified-repository").contentType(APPLICATION_JSON))
+        this.mockMvc.perform(get("/organization/ALLEGRO/last-modified-repository").contentType(APPLICATION_JSON))
                 .andExpect(status().isOk());
 
     }

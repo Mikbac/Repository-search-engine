@@ -1,41 +1,37 @@
 package com.service;
 
+import com.model.Repository;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import static junit.framework.TestCase.assertNull;
+import static org.junit.Assert.assertNotNull;
+
+@RunWith(SpringRunner.class)
+@WebMvcTest
 public class RepositoryServiceTest {
 
-    @Autowired
+    @MockBean
     RepositoryService repositoryService;
 
     @Test
     public void getAllRepositoriesWhenUsernameIsAllegro() throws Exception {
-        repositoryService.getAllRepositories("Allegro");
+        assertNotNull(repositoryService.getAllRepositories("Allegro"));
     }
 
     @Test
     public void getAllRepositoriesWhenUsernameIsallegro() throws Exception {
-        repositoryService.getAllRepositories("allegro");
+        assertNotNull(repositoryService.getAllRepositories("allegro"));
     }
 
     @Test
     public void getAllRepositoriesWhenUsernameIsALLEGRO() throws Exception {
-        repositoryService.getAllRepositories("ALLEGRO");
+        assertNotNull(repositoryService.getAllRepositories("ALLEGRO"));
     }
 
-    @Test
-    public void getLastUpdatedRepositoryWhenUsernameIsAllegro() throws Exception {
-        repositoryService.getLastUpdatedRepository("Allegro");
-    }
-
-    @Test
-    public void getLastUpdatedRepositoryWhenUsernameIsallegro() throws Exception {
-        repositoryService.getLastUpdatedRepository("allegro");
-    }
-
-    @Test
-    public void getLastUpdatedRepositoryWhenUsernameIsALLEGRO() throws Exception {
-        repositoryService.getLastUpdatedRepository("ALLEGRO");
-    }
 
 }
