@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class RepositoryServiceImp implements RepositoryService {
+public class RepositoryServiceImpl implements RepositoryService {
 
     private OrganizationRepository organizationRepository;
     private RepositoryRepository repositoryRepository;
 
     @Autowired
-    public RepositoryServiceImp(OrganizationRepository organizationRepository, RepositoryRepository repositoryRepository) {
+    public RepositoryServiceImpl(OrganizationRepository organizationRepository, RepositoryRepository repositoryRepository) {
         this.organizationRepository = organizationRepository;
         this.repositoryRepository = repositoryRepository;
     }
