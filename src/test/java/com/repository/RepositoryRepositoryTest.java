@@ -1,4 +1,4 @@
-package com.dao;
+package com.repository;
 
 import com.model.Repository;
 import org.junit.Test;
@@ -7,13 +7,13 @@ import java.util.List;
 
 import static org.junit.Assert.assertNotNull;
 
-public class RepositoryDaoTest {
+public class RepositoryRepositoryTest {
 
     @Test
     public void getRepositoryWhenOrganizationNameIsAllegro() {
 
         List<Repository> repositories;
-        repositories = RepositoryDao.getRepositories("Allegro", 1);
+        repositories = RepositoryRepository.getRepositories("Allegro", 1);
 
         assertNotNull(repositories);
 
@@ -23,7 +23,7 @@ public class RepositoryDaoTest {
     public void getRepositoryWhenOrganizationNameIsallegro() {
 
         List<Repository> repositories;
-        repositories = RepositoryDao.getRepositories("allegro", 100);
+        repositories = RepositoryRepository.getRepositories("allegro", 100);
 
         assertNotNull(repositories);
 
@@ -33,7 +33,7 @@ public class RepositoryDaoTest {
     public void getRepositoryWhenOrganizationNameIsALLEGRO() {
 
         List<Repository> repositories;
-        repositories = RepositoryDao.getRepositories("ALLEGRO", 15);
+        repositories = RepositoryRepository.getRepositories("ALLEGRO", 15);
 
         assertNotNull(repositories);
 

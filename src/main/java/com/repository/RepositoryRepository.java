@@ -1,4 +1,4 @@
-package com.dao;
+package com.repository;
 
 import com.model.Repository;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @org.springframework.stereotype.Repository
-public class RepositoryDao {
+public class RepositoryRepository {
 
 
     public static List<Repository> getRepositories(String organizationName, int pagesNumber) {

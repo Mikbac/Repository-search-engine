@@ -1,16 +1,16 @@
-package com.dao;
+package com.repository;
 
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertNotNull;
 
-public class OrganizationDaoTest {
+public class OrganizationRepositoryTest {
 
     @Test
     public void readNumberOfRepositoriesWhenOrganizationNameIsAllegro() {
 
         int pagesNumber;
-        pagesNumber = OrganizationDao.readNumberOfRepositories("Allegro");
+        pagesNumber = OrganizationRepository.readNumberOfRepositories("Allegro");
 
         assertNotNull(pagesNumber);
 
@@ -20,7 +20,7 @@ public class OrganizationDaoTest {
     public void readNumberOfRepositoriesWhenOrganizationNameIsALLEGRO() {
 
         int pagesNumber;
-        pagesNumber = OrganizationDao.readNumberOfRepositories("ALLEGRO");
+        pagesNumber = OrganizationRepository.readNumberOfRepositories("ALLEGRO");
 
         assertNotNull(pagesNumber);
 

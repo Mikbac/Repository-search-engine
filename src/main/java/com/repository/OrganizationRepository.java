@@ -1,11 +1,11 @@
-package com.dao;
+package com.repository;
 
 import com.model.Organization;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
 @Repository
-public class OrganizationDao {
+public class OrganizationRepository {
 
     public static int readNumberOfRepositories(String organizationName) {
         RestTemplate restTemplate = new RestTemplate();
