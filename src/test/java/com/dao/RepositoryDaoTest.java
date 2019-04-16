@@ -1,6 +1,5 @@
 package com.dao;
 
-import com.dao.RepositoryDao;
 import com.model.Repository;
 import org.junit.Test;
 
