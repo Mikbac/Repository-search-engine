@@ -10,7 +10,7 @@ import static org.junit.Assert.assertNotNull;
 public class RepositoryDaoTest {
 
     @Test
-    public void getRepositoryWhenUsernameIsAllegro() {
+    public void getRepositoryWhenOrganizationNameIsAllegro() {
 
         List<Repository> repositories;
         repositories = RepositoryDao.getRepositories("Allegro", 1);
@@ -20,7 +20,7 @@ public class RepositoryDaoTest {
     }
 
     @Test
-    public void getRepositoryWhenUsernameIsallegro() {
+    public void getRepositoryWhenOrganizationNameIsallegro() {
 
         List<Repository> repositories;
         repositories = RepositoryDao.getRepositories("allegro", 100);
@@ -30,7 +30,7 @@ public class RepositoryDaoTest {
     }
 
     @Test
-    public void getRepositoryWhenUsernameIsALLEGRO() {
+    public void getRepositoryWhenOrganizationNameIsALLEGRO() {
 
         List<Repository> repositories;
         repositories = RepositoryDao.getRepositories("ALLEGRO", 15);

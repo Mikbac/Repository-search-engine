@@ -17,32 +17,32 @@ public class RepositoryServiceTest {
     RepositoryService repositoryService;
 
     @Test
-    public void getAllRepositoriesWhenUsernameIsAllegro() throws Exception {
+    public void getAllRepositoriesWhenOrganizationNameIsAllegro() throws Exception {
         assertNotNull(repositoryService.getAllRepositories("Allegro"));
     }
 
     @Test
-    public void getAllRepositoriesWhenUsernameIsallegro() throws Exception {
+    public void getAllRepositoriesWhenOrganizationNameIsallegro() throws Exception {
         assertNotNull(repositoryService.getAllRepositories("allegro"));
     }
 
     @Test
-    public void getAllRepositoriesWhenUsernameIsALLEGRO() throws Exception {
+    public void getAllRepositoriesWhenOrganizationNameIsALLEGRO() throws Exception {
         assertNotNull(repositoryService.getAllRepositories("ALLEGRO"));
     }
 
     @Test
-    public void getNumberOfRepositoriesWhenUsernameIsAllegro(){
+    public void getNumberOfRepositoriesWhenOrganizationNameIsAllegro(){
         assertNotNull(repositoryService.getNumberOfRepositories("Allegro"));
     }
 
     @Test
-    public void getNumberOfRepositoriesWhenUsernameIsallegro(){
+    public void getNumberOfRepositoriesWhenOrganizationNameIsallegro(){
         assertNotNull(repositoryService.getNumberOfRepositories("allegro"));
     }
 
     @Test
-    public void getNumberOfRepositoriesWhenUsernameIsALLEGRO(){
+    public void getNumberOfRepositoriesWhenOrganizationNameIsALLEGRO(){
         assertNotNull(repositoryService.getNumberOfRepositories("ALLEGRO"));
     }
 

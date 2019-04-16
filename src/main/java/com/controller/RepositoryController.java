@@ -23,10 +23,10 @@ public class RepositoryController {
     }
 
 
-    @RequestMapping(value = "organization/{username}/last-modified-repository", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Repository getLastModifiedRepository(@PathVariable String username) {
+    @RequestMapping(value = "organization/{organizationName}/last-modified-repository", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Repository getLastModifiedRepository(@PathVariable String organizationName) {
         try {
-            return repositoryService.getLastUpdatedRepository(username);
+            return repositoryService.getLastUpdatedRepository(organizationName);
         } catch (HttpStatusCodeException e) {
             throw new ApiRateLimitException();
         } catch (Exception e) {

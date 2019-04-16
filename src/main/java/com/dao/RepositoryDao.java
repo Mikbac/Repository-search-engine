@@ -11,12 +11,12 @@ import java.util.List;
 public class RepositoryDao {
 
 
-    public static List<Repository> getRepositories(String username, int pagesNumber) {
+    public static List<Repository> getRepositories(String organizationName, int pagesNumber) {
 
         String url;
         Repository[] repositories;
 
-        url = "https://api.github.com/orgs/" + username + "/repos?per_page=" + pagesNumber;
+        url = "https://api.github.com/orgs/" + organizationName + "/repos?per_page=" + pagesNumber;
         repositories = readRepositories(url);
 
         return Arrays.asList(repositories);

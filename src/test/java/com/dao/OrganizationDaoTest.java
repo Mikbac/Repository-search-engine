@@ -7,7 +7,7 @@ import static junit.framework.TestCase.assertNotNull;
 public class OrganizationDaoTest {
 
     @Test
-    public void readNumberOfRepositoriesWhenUsernameIsAllegro() {
+    public void readNumberOfRepositoriesWhenOrganizationNameIsAllegro() {
 
         int pagesNumber;
         pagesNumber = OrganizationDao.readNumberOfRepositories("Allegro");
@@ -17,7 +17,7 @@ public class OrganizationDaoTest {
     }
 
     @Test
-    public void readNumberOfRepositoriesWhenUsernameIsALLEGRO() {
+    public void readNumberOfRepositoriesWhenOrganizationNameIsALLEGRO() {
 
         int pagesNumber;
         pagesNumber = OrganizationDao.readNumberOfRepositories("ALLEGRO");
