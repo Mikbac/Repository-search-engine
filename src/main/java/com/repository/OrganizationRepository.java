@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 @Repository
 public class OrganizationRepository {
 
-    public static int readNumberOfRepositories(String organizationName) {
+    public int readNumberOfRepositories(String organizationName) {
         RestTemplate restTemplate = new RestTemplate();
         String url;
         url = "https://api.github.com/orgs/" + organizationName;

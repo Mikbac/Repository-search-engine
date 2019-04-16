@@ -11,7 +11,7 @@ import java.util.List;
 public class RepositoryRepository {
 
 
-    public static List<Repository> getRepositories(String organizationName, int pagesNumber) {
+    public List<Repository> getRepositories(String organizationName, int pagesNumber) {
 
         String url;
         Repository[] repositories;
@@ -23,7 +23,7 @@ public class RepositoryRepository {
     }
 
 
-    private static Repository[] readRepositories(String url) {
+    private Repository[] readRepositories(String url) {
         RestTemplate restTemplate = new RestTemplate();
         Repository[] repositories = restTemplate.getForObject(url, Repository[].class);
 

@@ -24,16 +24,16 @@ public class RepositoryServiceImpl implements RepositoryService {
     @Override
     public List<Repository> getAllRepositories(String organizationName) {
 
-        int pagesNumber = OrganizationRepository.readNumberOfRepositories(organizationName);
+        int pagesNumber = getNumberOfRepositories(organizationName);
 
-        return RepositoryRepository.getRepositories(organizationName, pagesNumber);
+        return repositoryRepository.getRepositories(organizationName, pagesNumber);
     }
 
 
     @Override
     public int getNumberOfRepositories(String organizationName) {
 
-        int pagesNumber = OrganizationRepository.readNumberOfRepositories(organizationName);
+        int pagesNumber = organizationRepository.readNumberOfRepositories(organizationName);
 
         return pagesNumber;
     }
