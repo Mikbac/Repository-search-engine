@@ -13,7 +13,7 @@ public class RepositoryDaoTest {
     public void getRepositoryWhenUsernameIsAllegro() {
 
         List<Repository> repositories;
-        repositories = RepositoryDao.getRepositories("Allegro");
+        repositories = RepositoryDao.getRepositories("Allegro", 1);
 
         assertNotNull(repositories);
 
@@ -23,7 +23,7 @@ public class RepositoryDaoTest {
     public void getRepositoryWhenUsernameIsallegro() {
 
         List<Repository> repositories;
-        repositories = RepositoryDao.getRepositories("allegro");
+        repositories = RepositoryDao.getRepositories("allegro", 100);
 
         assertNotNull(repositories);
 
@@ -33,7 +33,7 @@ public class RepositoryDaoTest {
     public void getRepositoryWhenUsernameIsALLEGRO() {
 
         List<Repository> repositories;
-        repositories = RepositoryDao.getRepositories("ALLEGRO");
+        repositories = RepositoryDao.getRepositories("ALLEGRO", 15);
 
         assertNotNull(repositories);
 

@@ -1,6 +1,5 @@
 package com.dao;
 
-import com.model.Organization;
 import com.model.Repository;
 
 import org.springframework.web.client.RestTemplate;
@@ -12,12 +11,10 @@ import java.util.List;
 public class RepositoryDao {
 
 
-    public static List<Repository> getRepositories(String username) {
+    public static List<Repository> getRepositories(String username, int pagesNumber) {
 
         String url;
         Repository[] repositories;
-        int pagesNumber;
-        pagesNumber = readNumberOfRepositories(username);
 
         url = "https://api.github.com/orgs/" + username + "/repos?per_page=" + pagesNumber;
         repositories = readRepositories(url);
@@ -34,13 +31,4 @@ public class RepositoryDao {
     }
 
 
-    private static int readNumberOfRepositories(String username) {
-        RestTemplate restTemplate = new RestTemplate();
-        String url;
-        url = "https://api.github.com/orgs/" + username;
-
-        Organization organization = restTemplate.getForObject(url, Organization.class);
-
-        return organization.getNumberOfRepositories();
-    }
 }

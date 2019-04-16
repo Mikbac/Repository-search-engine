@@ -6,7 +6,9 @@ import java.util.List;
 
 public interface RepositoryService {
 
-    List<Repository> getAllRepositories(String username) throws Exception;
+    List<Repository> getAllRepositories(String organizationName) throws Exception;
 
-    Repository getLastUpdatedRepository(String username) throws Exception;
+    int getNumberOfRepositories(String organizationName);
+
+    Repository getLastUpdatedRepository(String organizationName) throws Exception;
 }

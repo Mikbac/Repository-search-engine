@@ -31,5 +31,19 @@ public class RepositoryServiceTest {
         assertNotNull(repositoryService.getAllRepositories("ALLEGRO"));
     }
 
+    @Test
+    public void getNumberOfRepositoriesWhenUsernameIsAllegro(){
+        assertNotNull(repositoryService.getNumberOfRepositories("Allegro"));
+    }
+
+    @Test
+    public void getNumberOfRepositoriesWhenUsernameIsallegro(){
+        assertNotNull(repositoryService.getNumberOfRepositories("allegro"));
+    }
+
+    @Test
+    public void getNumberOfRepositoriesWhenUsernameIsALLEGRO(){
+        assertNotNull(repositoryService.getNumberOfRepositories("ALLEGRO"));
+    }
 
 }
