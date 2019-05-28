@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/Mikbac/Repository-search-engine.svg?branch=master)](https://travis-ci.org/Mikbac/Repository-search-engine)
 
 # Search engine of the last updated user repository.
-# (Allegro - Software Engineer - Intern)
 
 ### Installing
 ```
