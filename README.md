@@ -39,4 +39,4 @@ http://localhost:8080/organization/Allegro/last-modified-repository
 
 * [Swagger 2](https://swagger.io/)
 
-The server uses the [GitHub REST API](https://developer.github.com/v3/) . 
+The server uses the [GitHub REST API](https://developer.github.com/v3/). 
