@@ -1,8 +1,12 @@
-package com.repository;
+/**
+ * Created by MikBac on 2019
+ */
+
+package com.spring.repository;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import pl.MikBac.searchEngine.spring.repository.OrganizationRepository;
 
 import static junit.framework.TestCase.assertNotNull;
 

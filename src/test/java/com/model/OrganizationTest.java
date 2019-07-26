@@ -1,6 +1,11 @@
+/**
+ * Created by MikBac on 2019
+ */
+
 package com.model;
 
 import org.junit.Test;
+import pl.MikBac.searchEngine.model.Organization;
 
 import static org.junit.Assert.assertEquals;
 

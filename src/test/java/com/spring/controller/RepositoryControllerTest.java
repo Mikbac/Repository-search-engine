@@ -1,6 +1,11 @@
-package com.controller;
+/**
+ * Created by MikBac on 2019
+ */
 
-import com.service.RepositoryService;
+package com.spring.controller;
+
+import pl.MikBac.searchEngine.spring.controller.RepositoryController;
+import pl.MikBac.searchEngine.spring.service.RepositoryService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

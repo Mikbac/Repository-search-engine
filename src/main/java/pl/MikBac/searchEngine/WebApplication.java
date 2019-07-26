@@ -1,4 +1,8 @@
-package com;
+/**
+ * Created by MikBac on 2019
+ */
+
+package pl.MikBac.searchEngine;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,7 +20,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
-@EnableJpaRepositories("com.repository")
+@EnableJpaRepositories("pl.MikBac.searchEngine.spring.repository")
 @EnableSwagger2
 public class WebApplication extends SpringBootServletInitializer {
 
@@ -34,10 +38,9 @@ public class WebApplication extends SpringBootServletInitializer {
     @Bean
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .select().apis(RequestHandlerSelectors.basePackage("com.controller"))
+                .select().apis(RequestHandlerSelectors.basePackage("com.spring.controller"))
                 .build();
     }
-
 
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);

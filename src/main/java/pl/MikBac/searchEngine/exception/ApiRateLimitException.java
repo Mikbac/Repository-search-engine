@@ -1,4 +1,8 @@
-package com.exception;
+/**
+ * Created by MikBac on 2019
+ */
+
+package pl.MikBac.searchEngine.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

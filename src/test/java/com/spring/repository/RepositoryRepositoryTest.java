@@ -1,8 +1,13 @@
-package com.repository;
+/**
+ * Created by MikBac on 2019
+ */
 
-import com.model.Repository;
+package com.spring.repository;
+
+import pl.MikBac.searchEngine.model.Repository;
 import org.junit.Before;
 import org.junit.Test;
+import pl.MikBac.searchEngine.spring.repository.RepositoryRepository;
 
 import java.util.List;
 

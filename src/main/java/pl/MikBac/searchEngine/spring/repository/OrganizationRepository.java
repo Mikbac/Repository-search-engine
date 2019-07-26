@@ -1,8 +1,12 @@
-package com.repository;
+/**
+ * Created by MikBac on 2019
+ */
 
-import com.model.Organization;
+package pl.MikBac.searchEngine.spring.repository;
+
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
+import pl.MikBac.searchEngine.model.Organization;
 
 @Repository
 public class OrganizationRepository {
@@ -16,6 +20,5 @@ public class OrganizationRepository {
 
         return organization.getNumberOfRepositories();
     }
-
 
 }

@@ -1,6 +1,11 @@
-package com.service;
+/**
+ * Created by MikBac on 2019
+ */
 
-import com.model.Repository;
+package com.spring.service;
+
+import pl.MikBac.searchEngine.model.Repository;
+import pl.MikBac.searchEngine.spring.service.impl.DateSupport;
 import org.junit.Test;
 
 import java.time.LocalDateTime;

@@ -1,6 +1,10 @@
-package com.service;
+/**
+ * Created by MikBac on 2019
+ */
 
-import com.model.Repository;
+package pl.MikBac.searchEngine.spring.service;
+
+import pl.MikBac.searchEngine.model.Repository;
 
 import java.util.List;
 

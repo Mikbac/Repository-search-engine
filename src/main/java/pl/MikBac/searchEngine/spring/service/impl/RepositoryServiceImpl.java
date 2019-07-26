@@ -1,10 +1,15 @@
-package com.service;
+/**
+ * Created by MikBac on 2019
+ */
 
-import com.repository.OrganizationRepository;
-import com.repository.RepositoryRepository;
-import com.model.Repository;
+package pl.MikBac.searchEngine.spring.service.impl;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.MikBac.searchEngine.model.Repository;
+import pl.MikBac.searchEngine.spring.repository.OrganizationRepository;
+import pl.MikBac.searchEngine.spring.repository.RepositoryRepository;
+import pl.MikBac.searchEngine.spring.service.RepositoryService;
 
 import java.util.List;
 
@@ -20,7 +25,6 @@ public class RepositoryServiceImpl implements RepositoryService {
         this.repositoryRepository = repositoryRepository;
     }
 
-
     @Override
     public List<Repository> getAllRepositories(String organizationName) {
 
@@ -29,7 +33,6 @@ public class RepositoryServiceImpl implements RepositoryService {
         return repositoryRepository.getRepositories(organizationName, pagesNumber);
     }
 
-
     @Override
     public int getNumberOfRepositories(String organizationName) {
 
@@ -37,7 +40,6 @@ public class RepositoryServiceImpl implements RepositoryService {
 
         return pagesNumber;
     }
-
 
     @Override
     public Repository getLastUpdatedRepository(String organizationName) {

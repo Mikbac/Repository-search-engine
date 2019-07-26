@@ -1,6 +1,10 @@
-package com.service;
+/**
+ * Created by MikBac on 2019
+ */
 
-import com.model.Repository;
+package pl.MikBac.searchEngine.spring.service.impl;
+
+import pl.MikBac.searchEngine.model.Repository;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -28,7 +32,6 @@ public class DateSupport {
 
         return latestRepository;
     }
-
 
     public static LocalDateTime getISODate(String dateString) {
         DateTimeFormatter isoFormatter = DateTimeFormatter.ISO_INSTANT;
