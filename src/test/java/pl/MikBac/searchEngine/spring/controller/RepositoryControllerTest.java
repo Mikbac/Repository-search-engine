@@ -2,31 +2,33 @@
  * Created by MikBac on 2019
  */
 
-package com.spring.controller;
+package pl.MikBac.searchEngine.spring.controller;
 
-import pl.MikBac.searchEngine.spring.controller.RepositoryController;
-import pl.MikBac.searchEngine.spring.service.RepositoryService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import pl.MikBac.searchEngine.WebApplication;
+import pl.MikBac.searchEngine.spring.facade.RepositoryFacade;
+
+import javax.annotation.Resource;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
 @RunWith(SpringRunner.class)
-@WebMvcTest(RepositoryController.class)
+@SpringBootTest(classes = WebApplication.class)
+@AutoConfigureMockMvc
 public class RepositoryControllerTest {
-    @Autowired
+    @Resource
     private MockMvc mockMvc;
 
     @MockBean
-    private RepositoryService repositoryService;
+    private RepositoryFacade repositoryFacade;
 
     @Test
     public void getRepositoryWhenOrganizationNameIsAllegro() throws Exception {
@@ -51,6 +53,5 @@ public class RepositoryControllerTest {
                 .andExpect(status().isOk());
 
     }
-
 
 }

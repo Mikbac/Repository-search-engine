@@ -2,10 +2,9 @@
  * Created by MikBac on 2019
  */
 
-package com.model;
+package pl.MikBac.searchEngine.model;
 
 import org.junit.Test;
-import pl.MikBac.searchEngine.model.Repository;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,7 +12,7 @@ public class RepositoryTest {
 
     @Test
     public void setNameAndGetName1(){
-        Repository repository = new Repository();
+        RepositoryModel repository = new RepositoryModel();
         String name = "allegro-api";
 
         repository.setRepositoryName(name);
@@ -23,7 +22,7 @@ public class RepositoryTest {
 
     @Test
     public void setNameAndGetName2(){
-        Repository repository = new Repository();
+        RepositoryModel repository = new RepositoryModel();
         String name = "allegro-tech-labs-iot";
 
         repository.setRepositoryName(name);
@@ -33,7 +32,7 @@ public class RepositoryTest {
 
     @Test
     public void setLastUpdateAndGetLastUpdate1(){
-        Repository repository = new Repository();
+        RepositoryModel repository = new RepositoryModel();
         String lastUpdate = "2019-04-10T07:39:33Z";
 
         repository.setLastUpdate(lastUpdate);
@@ -43,7 +42,7 @@ public class RepositoryTest {
 
     @Test
     public void setLastUpdateAndGetLastUpdate2(){
-        Repository repository = new Repository();
+        RepositoryModel repository = new RepositoryModel();
         String lastUpdate = "2019-01-07T13:23:15Z";
 
         repository.setLastUpdate(lastUpdate);

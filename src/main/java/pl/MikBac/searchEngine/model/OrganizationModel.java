@@ -9,16 +9,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pl.MikBac.searchEngine.constants.ModelsConstants.Organization;
+
+import javax.persistence.Table;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Organization {
+@Table(name = Organization.TABLE)
+public class OrganizationModel {
 
-    @JsonProperty("login")
-    String name;
+    @JsonProperty(Organization.LOGIN)
+    String login;
 
-    @JsonProperty("public_repos")
-    int numberOfRepositories;
+    @JsonProperty(Organization.PUBLIC_REPOS)
+    int publicRepos;
 }

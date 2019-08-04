@@ -4,15 +4,21 @@
 
 package pl.MikBac.searchEngine.spring.service;
 
-import pl.MikBac.searchEngine.model.Repository;
+import pl.MikBac.searchEngine.model.RepositoryModel;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface RepositoryService {
 
-    List<Repository> getAllRepositories(String organizationName) throws Exception;
+    List<RepositoryModel> getAllRepositories(final String organizationName) throws Exception;
 
-    int getNumberOfRepositories(String organizationName);
+    int getNumberOfRepositories(final String organizationName);
 
-    Repository getLastUpdatedRepository(String organizationName) throws Exception;
+    RepositoryModel getLastUpdatedRepository(final String organizationName) throws Exception;
+
+    LocalDateTime getISODate(final String dateString);
+
+    RepositoryModel findLatestDate(final List<RepositoryModel> repositories);
+
 }

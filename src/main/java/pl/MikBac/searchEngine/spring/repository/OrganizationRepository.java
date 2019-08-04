@@ -6,7 +6,7 @@ package pl.MikBac.searchEngine.spring.repository;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
-import pl.MikBac.searchEngine.model.Organization;
+import pl.MikBac.searchEngine.model.OrganizationModel;
 
 @Repository
 public class OrganizationRepository {
@@ -16,9 +16,9 @@ public class OrganizationRepository {
         String url;
         url = "https://api.github.com/orgs/" + organizationName;
 
-        Organization organization = restTemplate.getForObject(url, Organization.class);
+        OrganizationModel organizationModel = restTemplate.getForObject(url, OrganizationModel.class);
 
-        return organization.getNumberOfRepositories();
+        return organizationModel.getPublicRepos();
     }
 
 }

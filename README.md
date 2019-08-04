@@ -1,5 +1,5 @@
 
-# Search engine of the last updated user repository.
+# Search engine of the last updated user repositoryModel.
 
 ### Installing
 ```
@@ -13,17 +13,17 @@
 ```
 Open the browser and hit 
 ```
-http://localhost:8080/organization/Allegro/last-modified-repository
+http://localhost:8080/organizationModel/Allegro/last-modified-repositoryModel
 ```
 
 ### API Endpoint
 
 |Endpoints|Usage|Params|
 |---|---|---|
-|GET /organization/{organizationName}/last-modified-repository|return the name of the last modified repository|{organizationName} - repository owner|
+|GET /organizationModel/{organizationName}/last-modified-repositoryModel|return the name of the last modified repositoryModel|{organizationName} - repositoryModel owner|
 
 ### An example: 
-#### ```GET /organization/Allegro/last-modified-repository```
+#### ```GET /organizationModel/Allegro/last-modified-repositoryModel```
 
 ### Built With
 

@@ -5,7 +5,7 @@
 package pl.MikBac.searchEngine.spring.repository;
 
 import org.springframework.web.client.RestTemplate;
-import pl.MikBac.searchEngine.model.Repository;
+import pl.MikBac.searchEngine.model.RepositoryModel;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,10 +13,10 @@ import java.util.List;
 @org.springframework.stereotype.Repository
 public class RepositoryRepository {
 
-    public List<Repository> getRepositories(String organizationName, int pagesNumber) {
+    public List<RepositoryModel> getRepositories(String organizationName, int pagesNumber) {
 
         String url;
-        Repository[] repositories;
+        RepositoryModel[] repositories;
 
         url = "https://api.github.com/orgs/" + organizationName + "/repos?per_page=" + pagesNumber;
         repositories = readRepositories(url);
@@ -24,9 +24,9 @@ public class RepositoryRepository {
         return Arrays.asList(repositories);
     }
 
-    private Repository[] readRepositories(String url) {
+    private RepositoryModel[] readRepositories(String url) {
         RestTemplate restTemplate = new RestTemplate();
-        Repository[] repositories = restTemplate.getForObject(url, Repository[].class);
+        RepositoryModel[] repositories = restTemplate.getForObject(url, RepositoryModel[].class);
 
         return repositories;
     }

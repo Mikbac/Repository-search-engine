@@ -2,11 +2,10 @@
  * Created by MikBac on 2019
  */
 
-package com.spring.repository;
+package pl.MikBac.searchEngine.spring.repository;
 
 import org.junit.Before;
 import org.junit.Test;
-import pl.MikBac.searchEngine.spring.repository.OrganizationRepository;
 
 import static junit.framework.TestCase.assertNotNull;
 

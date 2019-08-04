@@ -9,16 +9,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pl.MikBac.searchEngine.constants.ModelsConstants.Repository;
+
+import javax.persistence.Table;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Repository {
+@Table(name = Repository.TABLE)
+public class RepositoryModel {
 
-    @JsonProperty("name")
+    @JsonProperty(Repository.NAME)
     private String repositoryName;
 
-    @JsonProperty("pushed_at")
+    @JsonProperty(Repository.PUSHED_AT)
     private String lastUpdate;
 }
