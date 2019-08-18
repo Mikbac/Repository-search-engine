@@ -14,9 +14,7 @@ public class OrganizationModelTest {
     public void setNameAndGetName1() {
         OrganizationModel organization = new OrganizationModel();
         String name = "Allegro";
-
         organization.setLogin(name);
-
         assertEquals(name, organization.getLogin());
     }
 
@@ -24,9 +22,7 @@ public class OrganizationModelTest {
     public void setNameAndGetName2() {
         OrganizationModel organization = new OrganizationModel();
         String name = "123";
-
         organization.setLogin(name);
-
         assertEquals(name, organization.getLogin());
     }
 
@@ -34,9 +30,7 @@ public class OrganizationModelTest {
     public void setNumberOfRepositoriesAndGetName1() {
         OrganizationModel organization = new OrganizationModel();
         int numberOfRepositories = 1999;
-
         organization.setPublicRepos(numberOfRepositories);
-
         assertEquals(numberOfRepositories, organization.getPublicRepos());
     }
 
@@ -44,9 +38,7 @@ public class OrganizationModelTest {
     public void setNumberOfRepositoriesAndGetName2() {
         OrganizationModel organization = new OrganizationModel();
         int numberOfRepositories = 1;
-
         organization.setPublicRepos(numberOfRepositories);
-
         assertEquals(numberOfRepositories, organization.getPublicRepos());
     }
 }

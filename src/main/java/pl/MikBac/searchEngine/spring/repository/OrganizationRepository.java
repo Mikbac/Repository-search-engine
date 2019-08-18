@@ -13,11 +13,8 @@ public class OrganizationRepository {
 
     public int readNumberOfRepositories(String organizationName) {
         RestTemplate restTemplate = new RestTemplate();
-        String url;
-        url = "https://api.github.com/orgs/" + organizationName;
-
+        String url = "https://api.github.com/orgs/" + organizationName;
         OrganizationModel organizationModel = restTemplate.getForObject(url, OrganizationModel.class);
-
         return organizationModel.getPublicRepos();
     }
 

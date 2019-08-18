@@ -14,21 +14,15 @@ import java.util.List;
 public class RepositoryRepository {
 
     public List<RepositoryModel> getRepositories(String organizationName, int pagesNumber) {
-
-        String url;
+        String url = "https://api.github.com/orgs/" + organizationName + "/repos?per_page=" + pagesNumber;
         RepositoryModel[] repositories;
-
-        url = "https://api.github.com/orgs/" + organizationName + "/repos?per_page=" + pagesNumber;
         repositories = readRepositories(url);
-
         return Arrays.asList(repositories);
     }
 
     private RepositoryModel[] readRepositories(String url) {
         RestTemplate restTemplate = new RestTemplate();
-        RepositoryModel[] repositories = restTemplate.getForObject(url, RepositoryModel[].class);
-
-        return repositories;
+        return restTemplate.getForObject(url, RepositoryModel[].class);
     }
 
 }

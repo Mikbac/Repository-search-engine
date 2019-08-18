@@ -20,21 +20,15 @@ public class OrganizationRepositoryTest {
 
     @Test
     public void readNumberOfRepositoriesWhenOrganizationNameIsAllegro() {
-
         int pagesNumber;
         pagesNumber = organizationRepository.readNumberOfRepositories("Allegro");
-
         assertNotNull(pagesNumber);
-
     }
 
     @Test
     public void readNumberOfRepositoriesWhenOrganizationNameIsALLEGRO() {
-
         int pagesNumber;
         pagesNumber = organizationRepository.readNumberOfRepositories("ALLEGRO");
-
         assertNotNull(pagesNumber);
-
     }
 }

@@ -29,26 +29,19 @@ public class RepositoryServiceImpl implements RepositoryService {
 
     @Override
     public List<RepositoryModel> getAllRepositories(final String organizationName) {
-
         int pagesNumber = getNumberOfRepositories(organizationName);
-
         return repositoryRepository.getRepositories(organizationName, pagesNumber);
     }
 
     @Override
     public int getNumberOfRepositories(final String organizationName) {
-
-        int pagesNumber = organizationRepository.readNumberOfRepositories(organizationName);
-
-        return pagesNumber;
+        return organizationRepository.readNumberOfRepositories(organizationName);
     }
 
     @Override
     public RepositoryModel getLastUpdatedRepository(final String organizationName) {
-
         List<RepositoryModel> repositories;
         repositories = getAllRepositories(organizationName);
-
         return findLatestDate(repositories);
     }
 
@@ -56,18 +49,14 @@ public class RepositoryServiceImpl implements RepositoryService {
     public RepositoryModel findLatestDate(final List<RepositoryModel> repositories) {
         LocalDateTime latestDate;
         RepositoryModel latestRepository;
-
         latestDate = getISODate(repositories.get(0).getLastUpdate());
         latestRepository = repositories.get(0);
-
         for (int i = 1; i < repositories.size(); i++) {
             if (latestDate.isBefore(getISODate(repositories.get(i).getLastUpdate()))) {
                 latestDate = getISODate(repositories.get(i).getLastUpdate());
                 latestRepository = repositories.get(i);
             }
-
         }
-
         return latestRepository;
     }
 
@@ -75,7 +64,6 @@ public class RepositoryServiceImpl implements RepositoryService {
     public LocalDateTime getISODate(final String dateString) {
         DateTimeFormatter isoFormatter = DateTimeFormatter.ISO_INSTANT;
         Instant dateInstant = Instant.from(isoFormatter.parse(dateString));
-
         return LocalDateTime.ofInstant(dateInstant, ZoneId.of(ZoneOffset.UTC.getId()));
     }
 }

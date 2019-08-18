@@ -32,26 +32,20 @@ public class RepositoryControllerTest {
 
     @Test
     public void getRepositoryWhenOrganizationNameIsAllegro() throws Exception {
-
         this.mockMvc.perform(get("/organization/Allegro/last-modified-repository").contentType(APPLICATION_JSON))
                 .andExpect(status().isOk());
-
     }
 
     @Test
     public void getRepositoryWhenOrganizationNameIsallegro() throws Exception {
-
         this.mockMvc.perform(get("/organization/allegro/last-modified-repository").contentType(APPLICATION_JSON))
                 .andExpect(status().isOk());
-
     }
 
     @Test
     public void getRepositoryWhenOrganizationNameIsALLEGRO() throws Exception {
-
         this.mockMvc.perform(get("/organization/ALLEGRO/last-modified-repository").contentType(APPLICATION_JSON))
                 .andExpect(status().isOk());
-
     }
 
 }

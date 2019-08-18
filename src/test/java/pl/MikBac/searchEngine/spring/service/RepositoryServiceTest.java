@@ -59,30 +59,24 @@ public class RepositoryServiceTest {
     @Test
     public void getISODateWhenDateIsCorrect1() {
         String date = "2012-05-17T14:04:57Z";
-
         LocalDateTime correctDate = LocalDateTime.parse("2012-05-17T14:04:57");
         LocalDateTime newDate = repositoryService.getISODate(date);
-
         assertEquals(correctDate, newDate);
     }
 
     @Test
     public void getISODateWhenDateIsCorrect2() {
         String date = "2000-01-01T10:10:10Z";
-
         LocalDateTime correctDate = LocalDateTime.parse("2000-01-01T10:10:10");
         LocalDateTime newDate = repositoryService.getISODate(date);
-
         assertEquals(correctDate, newDate);
     }
 
     @Test
     public void getISODateWhenDateIsCorrect3() {
         String date = "2000-12-01T00:00:00Z";
-
         LocalDateTime correctDate = LocalDateTime.parse("2000-12-01T00:00:00");
         LocalDateTime newDate = repositoryService.getISODate(date);
-
         assertEquals(correctDate, newDate);
     }
 
@@ -93,17 +87,13 @@ public class RepositoryServiceTest {
         String date3 = "2005-02-03T06:06:06Z";
         String date4 = "2010-02-03T06:06:06Z";
         String date5 = "2077-02-03T06:06:06Z";
-
         RepositoryModel repository1 = new RepositoryModel("Name1", date1);
         RepositoryModel repository2 = new RepositoryModel("Name2", date2);
         RepositoryModel repository3 = new RepositoryModel("Name3", date3);
         RepositoryModel repository4 = new RepositoryModel("Name4", date4);
         RepositoryModel repository5 = new RepositoryModel("Name5", date5);
-
         List<RepositoryModel> repositories = Arrays.asList(repository1, repository2, repository3, repository4, repository5);
-
         RepositoryModel latestRepository = repositoryService.findLatestDate(repositories);
-
         assertEquals(repository5, latestRepository);
     }
 
@@ -114,17 +104,13 @@ public class RepositoryServiceTest {
         String date3 = "2125-10-03T06:06:06Z";
         String date4 = "2010-03-03T06:06:06Z";
         String date5 = "2177-01-03T06:06:06Z";
-
         RepositoryModel repository1 = new RepositoryModel("Name1", date1);
         RepositoryModel repository2 = new RepositoryModel("Name2", date2);
         RepositoryModel repository3 = new RepositoryModel("Name3", date3);
         RepositoryModel repository4 = new RepositoryModel("Name4", date4);
         RepositoryModel repository5 = new RepositoryModel("Name5", date5);
-
         List<RepositoryModel> repositories = Arrays.asList(repository1, repository2, repository3, repository4, repository5);
-
         RepositoryModel latestRepository = repositoryService.findLatestDate(repositories);
-
         assertEquals(repository5, latestRepository);
     }
 
@@ -135,17 +121,13 @@ public class RepositoryServiceTest {
         String date3 = "1998-12-02T06:06:06Z";
         String date4 = "1999-11-03T06:06:06Z";
         String date5 = "2277-12-12T06:06:06Z";
-
         RepositoryModel repository1 = new RepositoryModel("Name1", date1);
         RepositoryModel repository2 = new RepositoryModel("Name2", date2);
         RepositoryModel repository3 = new RepositoryModel("Name3", date3);
         RepositoryModel repository4 = new RepositoryModel("Name4", date4);
         RepositoryModel repository5 = new RepositoryModel("Name5", date5);
-
         List<RepositoryModel> repositories = Arrays.asList(repository1, repository2, repository3, repository4, repository5);
-
         RepositoryModel latestRepository = repositoryService.findLatestDate(repositories);
-
         assertEquals(repository5, latestRepository);
     }
 

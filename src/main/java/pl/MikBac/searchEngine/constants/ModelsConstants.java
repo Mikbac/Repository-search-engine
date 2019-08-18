@@ -16,7 +16,6 @@ public interface ModelsConstants {
         String TABLE = "RepositoryModel";
         String NAME = "name";
         String PUSHED_AT = "pushed_at";
-
     }
 
 }
