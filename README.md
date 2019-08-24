@@ -1,7 +1,7 @@
 # Search engine of the last updated user repository.
 
 # Table of contents
-* [Installing](#nstalling)
+* [Installing](#installing)
 * [API Endpoint](#api-endpoint)
 * [Example](#an-example)
 * [Built With](#built-with)
