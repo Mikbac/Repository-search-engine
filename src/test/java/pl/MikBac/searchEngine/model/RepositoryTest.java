@@ -1,12 +1,12 @@
-/**
- * Created by MikBac on 2019
- */
-
 package pl.MikBac.searchEngine.model;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+
+/**
+ * Created by MikBac on 2019
+ */
 
 public class RepositoryTest {
 

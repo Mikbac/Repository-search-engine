@@ -1,8 +1,8 @@
+package pl.MikBac.searchEngine.constants;
+
 /**
  * Created by MikBac on 04.08.2019
  */
-
-package pl.MikBac.searchEngine.constants;
 
 public interface ModelsConstants {
 

@@ -1,5 +1,10 @@
+# Search engine of the last updated user repository.
 
-# Search engine of the last updated user repositoryModel.
+# Table of contents
+* [Installing](#nstalling)
+* [API Endpoint](#api-endpoint)
+* [Example](#an-example)
+* [Built With](#built-with)
 
 ### Installing
 ```
@@ -13,17 +18,17 @@
 ```
 Open the browser and hit 
 ```
-http://localhost:8080/organizationModel/Allegro/last-modified-repositoryModel
+http://localhost:8080//last-modified-repository?organization=Microsoft
 ```
 
 ### API Endpoint
 
 |Endpoints|Usage|Params|
 |---|---|---|
-|GET /organizationModel/{organizationName}/last-modified-repositoryModel|return the name of the last modified repositoryModel|{organizationName} - repositoryModel owner|
+|GET /last-modified-repository?organization={organizationName}|return the name of the last modified repositoryModel|{organizationName} - repositoryModel owner|
 
 ### An example: 
-#### ```GET /organizationModel/Allegro/last-modified-repositoryModel```
+#### ```GET /last-modified-repository?organization=Microsoft```
 
 ### Built With
 
@@ -33,7 +38,7 @@ http://localhost:8080/organizationModel/Allegro/last-modified-repositoryModel
 
 * [Maven](https://maven.apache.org/)
 
-* [HSQLDB](http://hsqldb.org/)
+* [Log4j2](https://logging.apache.org/log4j/2.x/)
 
 * [JUnit 4](https://junit.org/junit4/)
 

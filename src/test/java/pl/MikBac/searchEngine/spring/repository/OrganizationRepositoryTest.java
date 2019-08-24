@@ -1,13 +1,14 @@
-/**
- * Created by MikBac on 2019
- */
-
 package pl.MikBac.searchEngine.spring.repository;
 
 import org.junit.Before;
 import org.junit.Test;
+import pl.MikBac.searchEngine.spring.repository.impl.OrganizationRepositoryImpl;
 
 import static junit.framework.TestCase.assertNotNull;
+
+/**
+ * Created by MikBac on 2019
+ */
 
 public class OrganizationRepositoryTest {
 
@@ -15,20 +16,20 @@ public class OrganizationRepositoryTest {
 
     @Before
     public void init() {
-        organizationRepository = new OrganizationRepository();
+        organizationRepository = new OrganizationRepositoryImpl();
     }
 
     @Test
     public void readNumberOfRepositoriesWhenOrganizationNameIsAllegro() {
-        int pagesNumber;
-        pagesNumber = organizationRepository.readNumberOfRepositories("Allegro");
+        Integer pagesNumber;
+        pagesNumber = organizationRepository.getRepositoriesQuantity("Allegro");
         assertNotNull(pagesNumber);
     }
 
     @Test
     public void readNumberOfRepositoriesWhenOrganizationNameIsALLEGRO() {
-        int pagesNumber;
-        pagesNumber = organizationRepository.readNumberOfRepositories("ALLEGRO");
+        Integer pagesNumber;
+        pagesNumber = organizationRepository.getRepositoriesQuantity("ALLEGRO");
         assertNotNull(pagesNumber);
     }
 }

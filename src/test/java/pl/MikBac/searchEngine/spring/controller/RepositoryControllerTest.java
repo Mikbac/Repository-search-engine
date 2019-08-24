@@ -1,7 +1,3 @@
-/**
- * Created by MikBac on 2019
- */
-
 package pl.MikBac.searchEngine.spring.controller;
 
 import org.junit.Test;
@@ -20,6 +16,10 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+/**
+ * Created by MikBac on 2019
+ */
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = WebApplication.class)
 @AutoConfigureMockMvc
@@ -32,19 +32,19 @@ public class RepositoryControllerTest {
 
     @Test
     public void getRepositoryWhenOrganizationNameIsAllegro() throws Exception {
-        this.mockMvc.perform(get("/organization/Allegro/last-modified-repository").contentType(APPLICATION_JSON))
+        this.mockMvc.perform(get("/last-modified-repository?organization=Allegro").contentType(APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
 
     @Test
     public void getRepositoryWhenOrganizationNameIsallegro() throws Exception {
-        this.mockMvc.perform(get("/organization/allegro/last-modified-repository").contentType(APPLICATION_JSON))
+        this.mockMvc.perform(get("/last-modified-repository?organization=allegro").contentType(APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
 
     @Test
     public void getRepositoryWhenOrganizationNameIsALLEGRO() throws Exception {
-        this.mockMvc.perform(get("/organization/ALLEGRO/last-modified-repository").contentType(APPLICATION_JSON))
+        this.mockMvc.perform(get("/last-modified-repository?organization=ALLEGRO").contentType(APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
 

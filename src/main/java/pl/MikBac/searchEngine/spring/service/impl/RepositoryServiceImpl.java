@@ -1,7 +1,3 @@
-/**
- * Created by MikBac on 2019
- */
-
 package pl.MikBac.searchEngine.spring.service.impl;
 
 import org.springframework.stereotype.Service;
@@ -18,6 +14,10 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+/**
+ * Created by MikBac on 2019
+ */
+
 @Service
 public class RepositoryServiceImpl implements RepositoryService {
 
@@ -29,24 +29,24 @@ public class RepositoryServiceImpl implements RepositoryService {
 
     @Override
     public List<RepositoryModel> getAllRepositories(final String organizationName) {
-        int pagesNumber = getNumberOfRepositories(organizationName);
+        int pagesNumber = getRepositoriesQuantity(organizationName);
         return repositoryRepository.getRepositories(organizationName, pagesNumber);
     }
 
     @Override
-    public int getNumberOfRepositories(final String organizationName) {
-        return organizationRepository.readNumberOfRepositories(organizationName);
+    public int getRepositoriesQuantity(final String organizationName) {
+        return organizationRepository.getRepositoriesQuantity(organizationName);
     }
 
     @Override
     public RepositoryModel getLastUpdatedRepository(final String organizationName) {
         List<RepositoryModel> repositories;
         repositories = getAllRepositories(organizationName);
-        return findLatestDate(repositories);
+        return getLatestDate(repositories);
     }
 
     @Override
-    public RepositoryModel findLatestDate(final List<RepositoryModel> repositories) {
+    public RepositoryModel getLatestDate(final List<RepositoryModel> repositories) {
         LocalDateTime latestDate;
         RepositoryModel latestRepository;
         latestDate = getISODate(repositories.get(0).getLastUpdate());

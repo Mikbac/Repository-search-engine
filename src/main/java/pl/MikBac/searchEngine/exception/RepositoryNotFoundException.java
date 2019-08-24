@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  */
 
 @ResponseStatus(HttpStatus.BAD_REQUEST)
-public class ApiRateLimitException extends RuntimeException {
+public class RepositoryNotFoundException extends RuntimeException {
 
-    public ApiRateLimitException(String organizationName) {
-        super("GitHub API rate limit for organization name: " + organizationName);
+    public RepositoryNotFoundException(String organizationName) {
+        super("Repository not found for organizationName: " + organizationName);
     }
 
 }

@@ -1,7 +1,3 @@
-/**
- * Created by MikBac on 2019
- */
-
 package pl.MikBac.searchEngine.spring.service;
 
 import org.junit.Test;
@@ -23,6 +19,10 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+
+/**
+ * Created by MikBac on 2019
+ */
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = WebApplication.class)
@@ -93,7 +93,7 @@ public class RepositoryServiceTest {
         RepositoryModel repository4 = new RepositoryModel("Name4", date4);
         RepositoryModel repository5 = new RepositoryModel("Name5", date5);
         List<RepositoryModel> repositories = Arrays.asList(repository1, repository2, repository3, repository4, repository5);
-        RepositoryModel latestRepository = repositoryService.findLatestDate(repositories);
+        RepositoryModel latestRepository = repositoryService.getLatestDate(repositories);
         assertEquals(repository5, latestRepository);
     }
 
@@ -110,7 +110,7 @@ public class RepositoryServiceTest {
         RepositoryModel repository4 = new RepositoryModel("Name4", date4);
         RepositoryModel repository5 = new RepositoryModel("Name5", date5);
         List<RepositoryModel> repositories = Arrays.asList(repository1, repository2, repository3, repository4, repository5);
-        RepositoryModel latestRepository = repositoryService.findLatestDate(repositories);
+        RepositoryModel latestRepository = repositoryService.getLatestDate(repositories);
         assertEquals(repository5, latestRepository);
     }
 
@@ -127,7 +127,7 @@ public class RepositoryServiceTest {
         RepositoryModel repository4 = new RepositoryModel("Name4", date4);
         RepositoryModel repository5 = new RepositoryModel("Name5", date5);
         List<RepositoryModel> repositories = Arrays.asList(repository1, repository2, repository3, repository4, repository5);
-        RepositoryModel latestRepository = repositoryService.findLatestDate(repositories);
+        RepositoryModel latestRepository = repositoryService.getLatestDate(repositories);
         assertEquals(repository5, latestRepository);
     }
 

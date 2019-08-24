@@ -1,16 +1,17 @@
-/**
- * Created by MikBac on 2019
- */
-
 package pl.MikBac.searchEngine.spring.repository;
 
 import org.junit.Before;
 import org.junit.Test;
 import pl.MikBac.searchEngine.model.RepositoryModel;
+import pl.MikBac.searchEngine.spring.repository.impl.RepositoryRepositoryImpl;
 
 import java.util.List;
 
 import static org.junit.Assert.assertNotNull;
+
+/**
+ * Created by MikBac on 2019
+ */
 
 public class RepositoryRepositoryTest {
 
@@ -18,7 +19,7 @@ public class RepositoryRepositoryTest {
 
     @Before
     public void init() {
-        repositoryRepository = new RepositoryRepository();
+        repositoryRepository = new RepositoryRepositoryImpl();
     }
 
     @Test
