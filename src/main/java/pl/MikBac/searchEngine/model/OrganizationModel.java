@@ -9,6 +9,7 @@ import lombok.Setter;
 import pl.MikBac.searchEngine.constants.ModelsConstants.Organization;
 
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 /**
@@ -24,9 +25,11 @@ import java.util.Objects;
 public class OrganizationModel {
 
     @JsonProperty(Organization.LOGIN)
+    @NotNull
     String login;
 
     @JsonProperty(Organization.PUBLIC_REPOS)
+    @NotNull
     Integer publicRepos;
 
     @Override

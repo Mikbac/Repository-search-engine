@@ -44,4 +44,4 @@ http://localhost:8080//last-modified-repository?organization=Microsoft
 
 * [Swagger 2](https://swagger.io/)
 
-The server uses the [GitHub REST API](https://developer.github.com/v3/). 
+The application uses the [GitHub REST API](https://developer.github.com/v3/). 

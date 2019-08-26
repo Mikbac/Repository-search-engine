@@ -9,6 +9,7 @@ import lombok.Setter;
 import pl.MikBac.searchEngine.constants.ModelsConstants.Repository;
 
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 /**
@@ -24,9 +25,11 @@ import java.util.Objects;
 public class RepositoryModel {
 
     @JsonProperty(Repository.NAME)
+    @NotNull
     private String repositoryName;
 
     @JsonProperty(Repository.PUSHED_AT)
+    @NotNull
     private String lastUpdate;
 
     @Override
