@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import pl.MikBac.searchEngine.constants.ModelsConstants.Organization;
+import pl.MikBac.searchEngine.constants.EntityConstants.Organization;
 
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;

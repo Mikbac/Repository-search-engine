@@ -23,7 +23,6 @@ public class RepositoryServiceImpl implements RepositoryService {
 
     @Resource
     private OrganizationRepository organizationRepository;
-
     @Resource
     private RepositoryRepository repositoryRepository;
 
@@ -31,11 +30,6 @@ public class RepositoryServiceImpl implements RepositoryService {
     public List<RepositoryModel> getAllRepositories(final String organizationName) {
         int pagesNumber = getRepositoriesQuantity(organizationName);
         return repositoryRepository.getRepositories(organizationName, pagesNumber);
-    }
-
-    @Override
-    public int getRepositoriesQuantity(final String organizationName) {
-        return organizationRepository.getRepositoriesQuantity(organizationName);
     }
 
     @Override
@@ -66,4 +60,9 @@ public class RepositoryServiceImpl implements RepositoryService {
         Instant dateInstant = Instant.from(isoFormatter.parse(dateString));
         return LocalDateTime.ofInstant(dateInstant, ZoneId.of(ZoneOffset.UTC.getId()));
     }
+
+    private int getRepositoriesQuantity(final String organizationName) {
+        return organizationRepository.getRepositoriesQuantity(organizationName);
+    }
+
 }

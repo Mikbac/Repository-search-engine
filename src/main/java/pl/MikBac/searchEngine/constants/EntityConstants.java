@@ -4,7 +4,7 @@ package pl.MikBac.searchEngine.constants;
  * Created by MikBac on 04.08.2019
  */
 
-public interface ModelsConstants {
+public interface EntityConstants {
 
     interface Organization {
         String TABLE = "OrganizationModel";

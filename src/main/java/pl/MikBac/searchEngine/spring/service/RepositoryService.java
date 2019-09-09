@@ -13,8 +13,6 @@ public interface RepositoryService {
 
     List<RepositoryModel> getAllRepositories(final String organizationName) throws Exception;
 
-    int getRepositoriesQuantity(final String organizationName);
-
     RepositoryModel getLastUpdatedRepository(final String organizationName) throws Exception;
 
     LocalDateTime getISODate(final String dateString);
