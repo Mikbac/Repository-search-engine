@@ -1,7 +1,7 @@
 package pl.MikBac.searchEngine.spring.service.impl;
 
 import org.springframework.stereotype.Service;
-import pl.MikBac.searchEngine.model.RepositoryModel;
+import pl.MikBac.searchEngine.model.exte.RepositoryModel;
 import pl.MikBac.searchEngine.spring.repository.OrganizationRepository;
 import pl.MikBac.searchEngine.spring.repository.RepositoryRepository;
 import pl.MikBac.searchEngine.spring.service.RepositoryService;

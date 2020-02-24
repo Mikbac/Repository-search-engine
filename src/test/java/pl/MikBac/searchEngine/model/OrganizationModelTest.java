@@ -1,6 +1,7 @@
 package pl.MikBac.searchEngine.model;
 
 import org.junit.Test;
+import pl.MikBac.searchEngine.model.exte.OrganizationModel;
 
 import static org.junit.Assert.assertEquals;
 

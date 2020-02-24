@@ -1,6 +1,6 @@
 package pl.MikBac.searchEngine.spring.service;
 
-import pl.MikBac.searchEngine.model.RepositoryModel;
+import pl.MikBac.searchEngine.model.exte.RepositoryModel;
 
 import java.time.LocalDateTime;
 import java.util.List;

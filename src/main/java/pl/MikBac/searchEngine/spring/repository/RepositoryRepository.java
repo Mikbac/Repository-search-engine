@@ -1,6 +1,6 @@
 package pl.MikBac.searchEngine.spring.repository;
 
-import pl.MikBac.searchEngine.model.RepositoryModel;
+import pl.MikBac.searchEngine.model.exte.RepositoryModel;
 
 import java.util.List;
 

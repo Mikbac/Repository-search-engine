@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import pl.MikBac.searchEngine.constants.WebConstants.Mapping;
-import pl.MikBac.searchEngine.model.RepositoryModel;
+import pl.MikBac.searchEngine.data.impl.RepositoryData;
 import pl.MikBac.searchEngine.spring.facade.RepositoryFacade;
 
 import javax.annotation.Resource;
@@ -28,8 +28,8 @@ public class RepositoryController {
     RepositoryFacade repositoryFacade;
 
     @GetMapping(value = Mapping.LAST_MODIFIED_REPOSITORY, produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody
-    RepositoryModel getLastModifiedRepository(@RequestParam final String organization) {
+    @ResponseBody
+    public RepositoryData getLastModifiedRepository(@RequestParam final String organization) {
         log.info("[getLastModifiedRepository] -- for organizationName: {}", () -> organization);
         return repositoryFacade.getLastModifiedRepository(organization);
     }

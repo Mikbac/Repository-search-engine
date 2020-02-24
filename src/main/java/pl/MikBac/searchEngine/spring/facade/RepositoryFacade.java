@@ -1,6 +1,6 @@
 package pl.MikBac.searchEngine.spring.facade;
 
-import pl.MikBac.searchEngine.model.RepositoryModel;
+import pl.MikBac.searchEngine.data.impl.RepositoryData;
 
 /**
  * Created by MikBac on 03.08.2019
@@ -8,6 +8,6 @@ import pl.MikBac.searchEngine.model.RepositoryModel;
 
 public interface RepositoryFacade {
 
-    RepositoryModel getLastModifiedRepository(final String organizationName);
+    RepositoryData getLastModifiedRepository(final String organizationName);
 
 }

@@ -8,7 +8,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import pl.MikBac.searchEngine.WebApplication;
-import pl.MikBac.searchEngine.model.RepositoryModel;
+import pl.MikBac.searchEngine.model.exte.RepositoryModel;
 import pl.MikBac.searchEngine.spring.repository.OrganizationRepository;
 import pl.MikBac.searchEngine.spring.repository.RepositoryRepository;
 

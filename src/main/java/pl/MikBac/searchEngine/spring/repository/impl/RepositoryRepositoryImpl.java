@@ -3,7 +3,7 @@ package pl.MikBac.searchEngine.spring.repository.impl;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
-import pl.MikBac.searchEngine.model.RepositoryModel;
+import pl.MikBac.searchEngine.model.exte.RepositoryModel;
 import pl.MikBac.searchEngine.spring.repository.RepositoryRepository;
 
 import java.util.Arrays;

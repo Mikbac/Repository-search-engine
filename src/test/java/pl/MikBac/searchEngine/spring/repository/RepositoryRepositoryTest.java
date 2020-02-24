@@ -2,7 +2,7 @@ package pl.MikBac.searchEngine.spring.repository;
 
 import org.junit.Before;
 import org.junit.Test;
-import pl.MikBac.searchEngine.model.RepositoryModel;
+import pl.MikBac.searchEngine.model.exte.RepositoryModel;
 import pl.MikBac.searchEngine.spring.repository.impl.RepositoryRepositoryImpl;
 
 import java.util.List;

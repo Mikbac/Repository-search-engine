@@ -1,4 +1,4 @@
-package pl.MikBac.searchEngine.model;
+package pl.MikBac.searchEngine.model.exte;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,9 +7,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import pl.MikBac.searchEngine.constants.EntityConstants.Organization;
+import pl.MikBac.searchEngine.model.Model;
 
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
@@ -22,7 +24,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Table(name = Organization.TABLE)
-public class OrganizationModel {
+public class OrganizationModel extends Model implements Serializable {
 
     @JsonProperty(Organization.LOGIN)
     @NotNull
