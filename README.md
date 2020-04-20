@@ -29,6 +29,7 @@ http://localhost:8080//last-modified-repository?organization=Microsoft
 
 ### An example: 
 #### ```GET /last-modified-repository?organization=Microsoft```
+##### Or open the browser and hit: ```/repository```
 
 ### Built With
 

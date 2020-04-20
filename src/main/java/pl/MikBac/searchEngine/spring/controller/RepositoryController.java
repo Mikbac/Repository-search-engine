@@ -1,37 +1,39 @@
+/*
+ * Created by mikbac1 on 2020
+ */
+
 package pl.MikBac.searchEngine.spring.controller;
 
-import lombok.extern.log4j.Log4j2;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import pl.MikBac.searchEngine.constants.WebConstants.Mapping;
-import pl.MikBac.searchEngine.data.impl.RepositoryData;
+import pl.MikBac.searchEngine.constants.WebConstants.Views;
 import pl.MikBac.searchEngine.spring.facade.RepositoryFacade;
 
 import javax.annotation.Resource;
 
+import static pl.MikBac.searchEngine.constants.WebConstants.Models.REPOSITORY_NAME;
+
 /**
- * Created by MikBac on 2019
+ * Created by MikBac on 2020
  */
 
-@Log4j2
-@CrossOrigin
-@RestController
-@RequestMapping(Mapping.ROOT)
+@Controller
 public class RepositoryController {
 
     @Resource
-    RepositoryFacade repositoryFacade;
+    private RepositoryFacade repositoryFacade;
 
-    @GetMapping(value = Mapping.LAST_MODIFIED_REPOSITORY, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
-    public RepositoryData getLastModifiedRepository(@RequestParam final String organization) {
-        log.info("[getLastModifiedRepository] -- for organizationName: {}", () -> organization);
-        return repositoryFacade.getLastModifiedRepository(organization);
+    @GetMapping(value = Mapping.REPOSITORY)
+    public String getView(@RequestParam(required = false) final String organizationName, final Model model) {
+
+        if (organizationName != null) {
+            model.addAttribute(REPOSITORY_NAME, repositoryFacade.getLastModifiedRepository(organizationName).getRepositoryName());
+        }
+
+        return Views.MAIN_PAGE;
     }
 
 }

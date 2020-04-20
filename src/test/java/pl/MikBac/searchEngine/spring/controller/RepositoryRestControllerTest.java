@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = WebApplication.class)
 @AutoConfigureMockMvc
-public class RepositoryControllerTest {
+public class RepositoryRestControllerTest {
     @Resource
     private MockMvc mockMvc;
 

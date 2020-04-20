@@ -1,0 +1,26 @@
+<!--
+  Created by MikBac on 2020
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title th:text="#{main.page.header.title.text}"></title>
+    <th:block th:include="components/others :: meta"/>
+    <th:block th:include="components/imports :: links"/>
+</head>
+<body>
+<div class="d-flex justify-content-center">
+    <div class="p-2 bd-highlight">
+        <h3 th:text="#{main.page.body.organization.name.text}" class="mt-2 mb-2"></h3>
+        <form action="/repository" method="get" id="repositoryForm" class="mb-3 ml-auto mr-auto">
+            <input type="text" name="organizationName">
+        </form>
+        <button type="submit" form="repositoryForm" class="btn btn-primary btn-lg btn-block" th:text="#{main.page.body.repository.search.text}"></button>
+        <div>
+            <span th:text="#{main.page.body.repository.name.text}"> </span><span th:text="${repositoryName}"></span>
+        </div>
+        <th:block th:include="components/imports :: scripts"/>
+    </div>
+</div>
+</body>
+</html>
