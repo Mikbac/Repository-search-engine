@@ -1,3 +1,5 @@
+![GitHub](https://img.shields.io/github/license/Mikbac/Repository-search-engine)
+
 # Search engine of the last updated user repository.
 
 # Table of contents
