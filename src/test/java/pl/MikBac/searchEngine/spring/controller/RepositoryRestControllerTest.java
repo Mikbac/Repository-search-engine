@@ -24,11 +24,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = WebApplication.class)
 @AutoConfigureMockMvc
 public class RepositoryRestControllerTest {
+
     @Resource
     private MockMvc mockMvc;
-
-    @MockBean
-    private RepositoryFacade repositoryFacade;
 
     @Test
     public void getRepositoryWhenOrganizationNameIsAllegro() throws Exception {

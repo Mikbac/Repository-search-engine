@@ -1,4 +1,4 @@
-package pl.MikBac.searchEngine.spring.controller;
+package pl.MikBac.searchEngine.spring.controller.API;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.MediaType;

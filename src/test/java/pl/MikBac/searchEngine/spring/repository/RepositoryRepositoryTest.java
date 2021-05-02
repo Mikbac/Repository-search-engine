@@ -2,24 +2,35 @@ package pl.MikBac.searchEngine.spring.repository;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.test.context.junit4.SpringRunner;
 import pl.MikBac.searchEngine.model.exte.RepositoryModel;
+import pl.MikBac.searchEngine.spring.property.GithubProperties;
 import pl.MikBac.searchEngine.spring.repository.impl.RepositoryRepositoryImpl;
 
 import java.util.List;
 
 import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.when;
 
 /**
  * Created by MikBac on 2019
  */
 
+@RunWith(SpringRunner.class)
 public class RepositoryRepositoryTest {
 
-    private RepositoryRepository repositoryRepository;
+    @InjectMocks
+    private final RepositoryRepository repositoryRepository = new RepositoryRepositoryImpl();
+
+    @Mock
+    private GithubProperties githubProperties;
 
     @Before
     public void init() {
-        repositoryRepository = new RepositoryRepositoryImpl();
+        when(githubProperties.getUrl()).thenReturn("https://api.github.com/orgs/");
     }
 
     @Test

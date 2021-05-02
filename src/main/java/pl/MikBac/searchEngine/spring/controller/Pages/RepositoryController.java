@@ -2,19 +2,19 @@
  * Created by mikbac1 on 2020
  */
 
-package pl.MikBac.searchEngine.spring.controller;
+package pl.MikBac.searchEngine.spring.controller.Pages;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.MikBac.searchEngine.constants.WebConstants.Mapping;
-import pl.MikBac.searchEngine.constants.WebConstants.Views;
 import pl.MikBac.searchEngine.spring.facade.RepositoryFacade;
 
 import javax.annotation.Resource;
 
 import static pl.MikBac.searchEngine.constants.WebConstants.Models.REPOSITORY_NAME;
+import static pl.MikBac.searchEngine.constants.WebConstants.Views.Page.MAIN_PAGE;
 
 /**
  * Created by MikBac on 2020
@@ -33,7 +33,7 @@ public class RepositoryController {
             model.addAttribute(REPOSITORY_NAME, repositoryFacade.getLastModifiedRepository(organizationName).getRepositoryName());
         }
 
-        return Views.MAIN_PAGE;
+        return MAIN_PAGE;
     }
 
 }

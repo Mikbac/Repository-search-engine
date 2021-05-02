@@ -30,16 +30,7 @@ import static org.junit.Assert.assertNotNull;
 public class RepositoryServiceTest {
 
     @Resource
-    private MockMvc mockMvc;
-
-    @Resource
     private RepositoryService repositoryService;
-
-    @MockBean
-    private OrganizationRepository organizationRepository;
-
-    @MockBean
-    private RepositoryRepository repositoryRepository;
 
     @Test
     public void getAllRepositoriesWhenOrganizationNameIsAllegro() throws Exception {

@@ -13,7 +13,10 @@ public interface WebConstants {
     }
 
     interface Views {
-        String MAIN_PAGE = "main";
+        interface Page {
+            String PAGE_CATALOG = "pages";
+            String MAIN_PAGE = PAGE_CATALOG + "/" + "mainPage";
+        }
     }
 
     interface Models {
