@@ -10,13 +10,13 @@
 
 ### Installing
 ```
-    mvn install
+mvn install
 ```
 ```
-    cd target
+cd target
 ```
 ```    
-    java -jar artifact-0.0.1-SNAPSHOT.war
+java -jar artifact-0.0.1-SNAPSHOT.war
 ```
 Open the browser and hit 
 ```
@@ -27,17 +27,17 @@ http://localhost:8080//last-modified-repository?organization=Microsoft
 
 |Endpoints|Usage|Params|
 |---|---|---|
-|GET /last-modified-repository?organization={organizationName}|return the name of the last modified repositoryModel|{organizationName} - repositoryModel owner|
+|GET /repository/last-modified/{organizationName}|return the name of the last modified repositoryModel|{organizationName} - repository owner|
 
 ### An example: 
-#### ```GET /last-modified-repository?organization=Microsoft```
-##### Or open the browser and hit: ```/repository```
+#### ```GET /repository/last-modified/Microsoft```
+##### Or open the browser and hit: ```/```
 
 ### Built With
 
 * [JDK 8](https://www.oracle.com/technetwork/java/index.html)
 
-* [Spring Boot - 2.1.4.RELEASE](https://spring.io/projects/spring-boot) 
+* [Spring Boot - 2.3.0.RELEASE](https://spring.io/projects/spring-boot) 
 
 * [Maven](https://maven.apache.org/)
 

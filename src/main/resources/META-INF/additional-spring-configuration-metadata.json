@@ -1,7 +1,7 @@
 {
   "properties": [
     {
-      "name": "github.api.url",
+      "name": "github.api.organization.url",
       "type": "java.lang.String",
       "description": "GitHub API URL."
     }

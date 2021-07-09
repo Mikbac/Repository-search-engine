@@ -7,4 +7,4 @@ ___  ___ _  _    ______
 =====================================
 ===== https://github.com/Mikbac =====
 =====================================
-${AnsiColor.BRIGHT_GREEN} :: Spring Boot ::  ${AnsiColor.DEFAULT}(v2.1.4.RELEASE)
+${AnsiColor.BRIGHT_GREEN} :: Spring Boot ::  ${AnsiColor.DEFAULT}(v2.3.0.RELEASE)

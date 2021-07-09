@@ -11,7 +11,6 @@ import pl.MikBac.searchEngine.constants.EntityConstants.Repository;
 import pl.MikBac.searchEngine.model.Model;
 
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -29,11 +28,9 @@ import java.util.Objects;
 public class RepositoryModel extends Model implements Serializable {
 
     @JsonProperty(Repository.NAME)
-    @NotNull
     private String repositoryName;
 
     @JsonProperty(Repository.PUSHED_AT)
-    @NotNull
     private String lastUpdate;
 
     @Override

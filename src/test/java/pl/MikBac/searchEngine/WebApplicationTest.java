@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import pl.MikBac.searchEngine.spring.controller.API.RepositoryRestController;
+import pl.MikBac.searchEngine.spring.controller.API.RepositoryController;
 
 import javax.annotation.Resource;
 
@@ -19,11 +19,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class WebApplicationTest {
 
     @Resource
-    RepositoryRestController repositoryRestController;
+    RepositoryController repositoryController;
 
     @Test
     public void contextLoads() {
-        assertThat(repositoryRestController).isNotNull();
+        assertThat(repositoryController).isNotNull();
     }
 
 }

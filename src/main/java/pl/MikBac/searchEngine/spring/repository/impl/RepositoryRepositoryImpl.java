@@ -3,6 +3,7 @@ package pl.MikBac.searchEngine.spring.repository.impl;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
+import pl.MikBac.searchEngine.exception.RepositoryNotFoundException;
 import pl.MikBac.searchEngine.model.exte.RepositoryModel;
 import pl.MikBac.searchEngine.spring.property.GithubProperties;
 import pl.MikBac.searchEngine.spring.repository.RepositoryRepository;
@@ -28,14 +29,19 @@ public class RepositoryRepositoryImpl implements RepositoryRepository {
     @Override
     public List<RepositoryModel> getRepositories(final String organizationName, final int pagesNumber) {
         log.info("[getRepositories] -- get repositories for organizationName: {}", () -> organizationName);
-        String url = getGithubApiUrl() + organizationName + "/" + REPOST + "?" + PER_PAGE + "=" + pagesNumber;
-        RepositoryModel[] repositories = readRepositories(url);
+
+        final String url = getGithubApiUrl() + organizationName + "/" + REPOST + "?" + PER_PAGE + "=" + pagesNumber;
+        final RepositoryModel[] repositories = readRepositories(url);
+
+        if (repositories == null || repositories.length == 0) {
+            throw new RepositoryNotFoundException(organizationName);
+        }
+
         return Arrays.asList(repositories);
     }
 
     private RepositoryModel[] readRepositories(final String url) {
-        RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject(url, RepositoryModel[].class);
+        return new RestTemplate().getForObject(url, RepositoryModel[].class);
     }
 
     private String getGithubApiUrl() {

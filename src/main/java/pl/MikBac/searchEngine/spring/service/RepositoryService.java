@@ -11,9 +11,9 @@ import java.util.List;
 
 public interface RepositoryService {
 
-    List<RepositoryModel> getAllRepositories(final String organizationName) throws Exception;
+    List<RepositoryModel> getAllRepositories(final String organizationName);
 
-    RepositoryModel getLastUpdatedRepository(final String organizationName) throws Exception;
+    RepositoryModel getLastUpdatedRepository(final String organizationName);
 
     LocalDateTime getISODate(final String dateString);
 

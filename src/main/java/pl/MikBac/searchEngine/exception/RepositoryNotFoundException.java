@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * Created by MikBac on 2019
  */
 
-@ResponseStatus(HttpStatus.BAD_REQUEST)
+@ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Organization not found!")
 public class RepositoryNotFoundException extends RuntimeException {
 
     public RepositoryNotFoundException(String organizationName) {

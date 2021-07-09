@@ -28,23 +28,19 @@ public class RepositoryServiceImpl implements RepositoryService {
 
     @Override
     public List<RepositoryModel> getAllRepositories(final String organizationName) {
-        int pagesNumber = getRepositoriesQuantity(organizationName);
-        return repositoryRepository.getRepositories(organizationName, pagesNumber);
+        return repositoryRepository.getRepositories(organizationName, getRepositoriesQuantity(organizationName));
     }
 
     @Override
     public RepositoryModel getLastUpdatedRepository(final String organizationName) {
-        List<RepositoryModel> repositories;
-        repositories = getAllRepositories(organizationName);
-        return getLatestDate(repositories);
+        return getLatestDate(getAllRepositories(organizationName));
     }
 
     @Override
     public RepositoryModel getLatestDate(final List<RepositoryModel> repositories) {
-        LocalDateTime latestDate;
-        RepositoryModel latestRepository;
-        latestDate = getISODate(repositories.get(0).getLastUpdate());
-        latestRepository = repositories.get(0);
+        LocalDateTime latestDate = getISODate(repositories.get(0).getLastUpdate());
+        RepositoryModel latestRepository = repositories.get(0);
+
         for (int i = 1; i < repositories.size(); i++) {
             if (latestDate.isBefore(getISODate(repositories.get(i).getLastUpdate()))) {
                 latestDate = getISODate(repositories.get(i).getLastUpdate());
@@ -56,8 +52,9 @@ public class RepositoryServiceImpl implements RepositoryService {
 
     @Override
     public LocalDateTime getISODate(final String dateString) {
-        DateTimeFormatter isoFormatter = DateTimeFormatter.ISO_INSTANT;
-        Instant dateInstant = Instant.from(isoFormatter.parse(dateString));
+        final DateTimeFormatter isoFormatter = DateTimeFormatter.ISO_INSTANT;
+        final Instant dateInstant = Instant.from(isoFormatter.parse(dateString));
+
         return LocalDateTime.ofInstant(dateInstant, ZoneId.of(ZoneOffset.UTC.getId()));
     }
 

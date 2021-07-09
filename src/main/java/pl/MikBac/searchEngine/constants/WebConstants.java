@@ -8,8 +8,8 @@ public interface WebConstants {
 
     interface Mapping {
         String ROOT = "/";
-        String LAST_MODIFIED_REPOSITORY = ROOT + "/last-modified-repository";
-        String REPOSITORY = ROOT + "/repository";
+        String REPOSITORY = "/repository";
+        String LAST_MODIFIED_REPOSITORY = "/last-modified/{organization}";
     }
 
     interface Views {

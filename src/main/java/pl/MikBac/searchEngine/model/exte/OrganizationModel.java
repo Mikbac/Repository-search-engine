@@ -10,7 +10,6 @@ import pl.MikBac.searchEngine.constants.EntityConstants.Organization;
 import pl.MikBac.searchEngine.model.Model;
 
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -27,11 +26,9 @@ import java.util.Objects;
 public class OrganizationModel extends Model implements Serializable {
 
     @JsonProperty(Organization.LOGIN)
-    @NotNull
     String login;
 
     @JsonProperty(Organization.PUBLIC_REPOS)
-    @NotNull
     Integer publicRepos;
 
     @Override

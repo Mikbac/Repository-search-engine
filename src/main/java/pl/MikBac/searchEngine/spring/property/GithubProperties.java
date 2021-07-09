@@ -11,7 +11,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Setter
 @Getter
-@ConfigurationProperties(prefix = "github.api")
+@ConfigurationProperties(prefix = "github.api.organization")
 public class GithubProperties {
 
     @NonNull
