@@ -1,0 +1,2 @@
+### Get the name and date of the last modified repository
+GET {{host}}/repository/last-modified/{{organizationName}}

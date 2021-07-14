@@ -21,6 +21,7 @@ public interface WebConstants {
 
     interface Models {
         String REPOSITORY_NAME = "repositoryName";
+        String ORGANIZATION_NAME = "organizationName";
     }
 
 }
