@@ -1,4 +1,8 @@
-![example workflow](https://github.com/Mikbac/Repository-search-engine/actions/workflows/maven.yml/badge.svg) [![Build Status](https://travis-ci.org/Mikbac/Repository-search-engine.svg?branch=master)](https://travis-ci.org/Mikbac/Repository-search-engine)![GitHub](https://img.shields.io/github/license/Mikbac/Repository-search-engine)
+![example workflow](https://github.com/Mikbac/Repository-search-engine/actions/workflows/maven.yml/badge.svg) [![Build Status](https://travis-ci.org/Mikbac/Repository-search-engine.svg?branch=master)](https://travis-ci.org/Mikbac/Repository-search-engine)
+
+[![Language grade: Java](https://img.shields.io/lgtm/grade/java/g/Mikbac/Repository-search-engine.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Mikbac/Repository-search-engine/context:java) [![Total alerts](https://img.shields.io/lgtm/alerts/g/Mikbac/Repository-search-engine.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Mikbac/Repository-search-engine/alerts/)
+
+![GitHub](https://img.shields.io/github/license/Mikbac/Repository-search-engine)
 
 # Search engine of the last updated user repository.
 
