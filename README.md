@@ -13,20 +13,25 @@
 * [Built With](#built-with)
 
 ### Installing
+1. Build and run the application:
 ```
 mvn install
-```
-```
 cd target
-```
-```    
 java -jar artifact-0.0.1-SNAPSHOT.war
 ```
-Open the browser and hit 
+or
 ```
-http://localhost:8080//last-modified-repository?organization=Microsoft
+docker build --tag mikbac/searchengine:1.0 -f Dockerfile .
+docker container run -p 8080:8080 --ip 0.0.0.0 --name searchengine mikbac/searchengine:1.0
 ```
-
+2. Open the browser and hit:
+```
+http://localhost:8080/repository/last-modified/Microsoft
+```
+or
+```
+http://localhost:8080/
+```
 ### API Endpoint
 
 |Endpoints|Usage|Params|

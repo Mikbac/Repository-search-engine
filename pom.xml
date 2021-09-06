@@ -10,8 +10,9 @@
         <relativePath/>
     </parent>
 
-    <groupId>pl.MikBac</groupId>
-    <artifactId>searchEngine</artifactId>
+    <groupId>pl.mikbac</groupId>
+    <artifactId>searchengine</artifactId>
+    <name>searchengine</name>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
