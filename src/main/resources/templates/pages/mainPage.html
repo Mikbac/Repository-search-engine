@@ -14,11 +14,13 @@
         <div class="p-2 bd-highlight">
             <h3 class="mt-2 mb-2" th:text="#{main.page.body.organization.name.text}"></h3>
             <form class="mb-3 ml-auto mr-auto" action="/" method="get" id="repositoryForm">
-                <input type="text" name="organizationName" th:value="${organizationName}">
+                <input type="text" name="organizationName" th:value="${organizationName}"/>
             </form>
-            <button type="submit" form="repositoryForm" class="btn btn-primary btn-lg btn-block" th:text="#{main.page.body.repository.search.text}"></button>
+            <button type="submit" form="repositoryForm" class="btn btn-primary btn-lg btn-block"
+                    th:text="#{main.page.body.repository.search.text}"></button>
             <div class="mt-4 result">
-                <span th:text="#{main.page.body.repository.name.text}"></span>&nbsp;<span class="answer" th:text="${repositoryName}"></span>
+                <span th:text="#{main.page.body.repository.name.text}"></span>&nbsp;<span class="answer"
+                                                                                          th:text="${repositoryName}"></span>
             </div>
         </div>
     </div>
