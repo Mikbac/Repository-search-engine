@@ -21,8 +21,8 @@ java -jar artifact-0.0.1-SNAPSHOT.war
 ```
 or
 ```
-docker build --tag mikbac/searchengine:1.0 -f Dockerfile .
-docker container run -p 8080:8080 --ip 0.0.0.0 --name searchengine mikbac/searchengine:1.0
+docker build --tag mikbac/search_engine:1.0 -f Dockerfile .
+docker container run -p 8080:8080 --ip 0.0.0.0 --name search_engine mikbac/search_engine:1.0
 ```
 2. Open the browser and hit:
 ```
