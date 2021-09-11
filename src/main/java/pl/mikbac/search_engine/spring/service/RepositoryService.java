@@ -2,7 +2,6 @@ package pl.mikbac.search_engine.spring.service;
 
 import pl.mikbac.search_engine.model.exte.RepositoryModel;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -11,12 +10,20 @@ import java.util.List;
 
 public interface RepositoryService {
 
+    /**
+     * Get the list of all repositories.
+     *
+     * @param organizationName organization name.
+     * @return list of repositories {@link RepositoryModel}.
+     */
     List<RepositoryModel> getAllRepositories(final String organizationName);
 
+    /**
+     * Get the last modified repository by the organization name.
+     *
+     * @param organizationName organization name.
+     * @return last modified repository {@link RepositoryModel}.
+     */
     RepositoryModel getLastUpdatedRepository(final String organizationName);
-
-    LocalDateTime getISODate(final String dateString);
-
-    RepositoryModel getLatestDate(final List<RepositoryModel> repositories);
 
 }

@@ -36,8 +36,7 @@ public class RepositoryServiceImpl implements RepositoryService {
         return getLatestDate(getAllRepositories(organizationName));
     }
 
-    @Override
-    public RepositoryModel getLatestDate(final List<RepositoryModel> repositories) {
+    private RepositoryModel getLatestDate(final List<RepositoryModel> repositories) {
         LocalDateTime latestDate = getISODate(repositories.get(0).getLastUpdate());
         RepositoryModel latestRepository = repositories.get(0);
 
@@ -50,8 +49,7 @@ public class RepositoryServiceImpl implements RepositoryService {
         return latestRepository;
     }
 
-    @Override
-    public LocalDateTime getISODate(final String dateString) {
+    private LocalDateTime getISODate(final String dateString) {
         final DateTimeFormatter isoFormatter = DateTimeFormatter.ISO_INSTANT;
         final Instant dateInstant = Instant.from(isoFormatter.parse(dateString));
 
