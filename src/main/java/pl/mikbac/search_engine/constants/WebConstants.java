@@ -8,8 +8,9 @@ public interface WebConstants {
 
     interface Mapping {
         String ROOT = "/";
-        String REPOSITORY = "/repository";
-        String LAST_MODIFIED_REPOSITORY = "/last-modified/{organization}";
+        String API = "/api";
+        String REPOSITORIES = API + "/repositories";
+        String LAST_MODIFIED_REPOSITORY = "/last-modified/{organizationName}";
     }
 
     interface Views {
@@ -20,8 +21,10 @@ public interface WebConstants {
     }
 
     interface Models {
-        String REPOSITORY_NAME = "repositoryName";
-        String ORGANIZATION_NAME = "organizationName";
+        interface Attributes {
+            String REPOSITORY_NAME = "repositoryName";
+            String ORGANIZATION_NAME = "organizationName";
+        }
     }
 
 }

@@ -26,7 +26,7 @@ docker container run -p 8080:8080 --ip 0.0.0.0 --name search_engine mikbac/searc
 ```
 2. Open the browser and hit:
 ```
-http://localhost:8080/repository/last-modified/Microsoft
+http://localhost:8080/api/repositories/last-modified/Microsoft
 ```
 or
 ```
@@ -36,11 +36,11 @@ http://localhost:8080/
 
 |Endpoints|Usage|Params|
 |---|---|---|
-|GET /repository/last-modified/{organizationName}|return the name of the last modified repositoryModel|{organizationName} - repository owner|
+|GET /api/repositories/last-modified/{organizationName}|return the name of the last modified repositoryModel|{organizationName} - repository owner|
 
 ### An example: 
-#### ```GET /repository/last-modified/Microsoft```
-##### Or open the browser and hit: ```/```
+#### ```GET http://localhost:8080/api/repositories/last-modified/Microsoft```
+##### Or open the browser and hit: ```http://localhost:8080/```
 
 ### Built With
 

@@ -1,4 +1,4 @@
-package pl.mikbac.search_engine.spring.controller.Pages;
+package pl.mikbac.search_engine.spring.controller.pages;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -10,8 +10,8 @@ import pl.mikbac.search_engine.spring.facade.RepositoryFacade;
 import javax.annotation.Resource;
 
 import static pl.mikbac.search_engine.constants.WebConstants.Mapping.ROOT;
-import static pl.mikbac.search_engine.constants.WebConstants.Models.ORGANIZATION_NAME;
-import static pl.mikbac.search_engine.constants.WebConstants.Models.REPOSITORY_NAME;
+import static pl.mikbac.search_engine.constants.WebConstants.Models.Attributes.ORGANIZATION_NAME;
+import static pl.mikbac.search_engine.constants.WebConstants.Models.Attributes.REPOSITORY_NAME;
 import static pl.mikbac.search_engine.constants.WebConstants.Views.Page.MAIN_PAGE;
 
 /**

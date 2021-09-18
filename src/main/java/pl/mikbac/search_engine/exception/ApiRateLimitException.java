@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * Created by MikBac on 2019
  */
 
-@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR, reason = "GitHub API rate limit!")
+@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR, reason = "GitHub api rate limit!")
 public class ApiRateLimitException extends RuntimeException {
 
     public ApiRateLimitException() {
-        super("GitHub API rate limit error.");
+        super("GitHub api rate limit error.");
     }
 
 }

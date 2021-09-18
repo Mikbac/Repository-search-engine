@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import pl.mikbac.search_engine.spring.controller.API.RepositoryController;
+import pl.mikbac.search_engine.spring.controller.api.RepositoryController;
 
 import javax.annotation.Resource;
 
