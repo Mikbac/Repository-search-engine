@@ -9,7 +9,7 @@
 # Table of contents
 * [Installing](#installing)
 * [API Endpoint](#api-endpoint)
-* [Example](#an-example)
+* [Example](#example)
 * [Built With](#built-with)
 
 ### Installing
@@ -38,9 +38,11 @@ http://localhost:8080/
 |---|---|---|
 |GET /api/repositories/last-modified/{organizationName}|return the name of the last modified repositoryModel|{organizationName} - repository owner|
 
-### An example: 
+### Example: 
 #### ```GET http://localhost:8080/api/repositories/last-modified/Microsoft```
 ##### Or open the browser and hit: ```http://localhost:8080/```
+
+An example of an HTTP request is also available in the ```http/question.http``` file.
 
 ### Built With
 
