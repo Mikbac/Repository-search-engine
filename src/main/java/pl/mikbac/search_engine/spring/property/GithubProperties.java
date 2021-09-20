@@ -11,10 +11,14 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Setter
 @Getter
-@ConfigurationProperties(prefix = "github.api.organization")
+@ConfigurationProperties(prefix = "github.api")
 public class GithubProperties {
 
     @NonNull
     private String url;
+
+    private String username;
+
+    private String token;
 
 }

@@ -4,6 +4,16 @@
       "name": "github.api.organization.url",
       "type": "java.lang.String",
       "description": "GitHub API URL."
+    },
+    {
+      "name": "github.api.username",
+      "type": "java.lang.String",
+      "description": "GitHub user username."
+    },
+    {
+      "name": "github.api.token",
+      "type": "java.lang.String",
+      "description": "GitHub user token."
     }
   ]
 }

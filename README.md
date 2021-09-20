@@ -7,39 +7,55 @@
 # Search engine of the last updated user repository.
 
 # Table of contents
+
 * [Installing](#installing)
 * [API Endpoint](#api-endpoint)
 * [Example](#example)
 * [Built With](#built-with)
 
 ### Installing
-1. Build and run the application:
+
+1. (Optional) Set GitHub username (```github.api.username```) and GitHub API token (```github.api.token```) in
+   ```application.properties```.
+
+
+2. Build and run the application:
+
 ```
 mvn install
 cd target
 java -jar artifact-0.0.1-SNAPSHOT.war
 ```
+
 or
+
 ```
 docker build --tag mikbac/search_engine:1.0 -f Dockerfile .
 docker container run -p 8080:8080 --ip 0.0.0.0 --name search_engine mikbac/search_engine:1.0
 ```
-2. Open the browser and hit:
+
+3. Open the browser and hit:
+
 ```
 http://localhost:8080/api/repositories/last-modified/Microsoft
 ```
+
 or
+
 ```
 http://localhost:8080/
 ```
+
 ### API Endpoint
 
 |Endpoints|Usage|Params|
 |---|---|---|
 |GET /api/repositories/last-modified/{organizationName}|return the name of the last modified repositoryModel|{organizationName} - repository owner|
 
-### Example: 
+### Example:
+
 #### ```GET http://localhost:8080/api/repositories/last-modified/Microsoft```
+
 ##### Or open the browser and hit: ```http://localhost:8080/```
 
 An example of an HTTP request is also available in the ```http/question.http``` file.
@@ -48,7 +64,7 @@ An example of an HTTP request is also available in the ```http/question.http``` 
 
 * [JDK 8](https://www.oracle.com/technetwork/java/index.html)
 
-* [Spring Boot - 2.3.0.RELEASE](https://spring.io/projects/spring-boot) 
+* [Spring Boot - 2.3.0.RELEASE](https://spring.io/projects/spring-boot)
 
 * [Maven](https://maven.apache.org/)
 

@@ -3,13 +3,9 @@ package pl.mikbac.search_engine.spring.repository.impl;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.RestTemplate;
 import pl.mikbac.search_engine.exception.ApiRateLimitException;
 import pl.mikbac.search_engine.model.exte.OrganizationModel;
-import pl.mikbac.search_engine.spring.property.GithubProperties;
 import pl.mikbac.search_engine.spring.repository.OrganizationRepository;
-
-import javax.annotation.Resource;
 
 /**
  * Created by MikBac on 2019
@@ -17,10 +13,7 @@ import javax.annotation.Resource;
 
 @Log4j2
 @Repository
-public class OrganizationRepositoryImpl implements OrganizationRepository {
-
-    @Resource
-    private GithubProperties githubProperties;
+public class OrganizationRepositoryImpl extends AbstractGitHubApiRepository implements OrganizationRepository {
 
     @Override
     public int getRepositoriesQuantity(final String organizationName) {
@@ -30,7 +23,7 @@ public class OrganizationRepositoryImpl implements OrganizationRepository {
         OrganizationModel organizationModel = null;
 
         try {
-            organizationModel = new RestTemplate().getForObject(url, OrganizationModel.class);
+            organizationModel = getGitHubRestTemplate().getForObject(url, OrganizationModel.class);
         } catch (HttpClientErrorException e) {
             throw new ApiRateLimitException();
         }

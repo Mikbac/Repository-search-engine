@@ -2,13 +2,10 @@ package pl.mikbac.search_engine.spring.repository.impl;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.client.RestTemplate;
 import pl.mikbac.search_engine.exception.RepositoryNotFoundException;
 import pl.mikbac.search_engine.model.exte.RepositoryModel;
-import pl.mikbac.search_engine.spring.property.GithubProperties;
 import pl.mikbac.search_engine.spring.repository.RepositoryRepository;
 
-import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,10 +18,7 @@ import static pl.mikbac.search_engine.constants.RequestConstants.REPOST;
 
 @Log4j2
 @Repository
-public class RepositoryRepositoryImpl implements RepositoryRepository {
-
-    @Resource
-    private GithubProperties githubProperties;
+public class RepositoryRepositoryImpl extends AbstractGitHubApiRepository implements RepositoryRepository {
 
     @Override
     public List<RepositoryModel> getRepositories(final String organizationName, final int pagesNumber) {
@@ -41,7 +35,7 @@ public class RepositoryRepositoryImpl implements RepositoryRepository {
     }
 
     private RepositoryModel[] readRepositories(final String url) {
-        return new RestTemplate().getForObject(url, RepositoryModel[].class);
+        return getGitHubRestTemplate().getForObject(url, RepositoryModel[].class);
     }
 
     private String getGithubApiUrl() {
