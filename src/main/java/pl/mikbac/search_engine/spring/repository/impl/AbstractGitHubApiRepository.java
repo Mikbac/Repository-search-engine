@@ -26,13 +26,14 @@ public abstract class AbstractGitHubApiRepository {
 
     protected String getApiUrl(final String additionalPath, final MultiValueMap<String, String> queryParams) {
         return UriComponentsBuilder
-                .fromUriString(getGithubApiBaseUrl(additionalPath))
+                .fromUriString(getGithubApiBaseUrl())
+                .path(additionalPath)
                 .queryParams(queryParams)
                 .build()
                 .toUriString();
     }
 
-    private String getGithubApiBaseUrl(final String additionalPath) {
-        return githubProperties.getUrl() + additionalPath;
+    private String getGithubApiBaseUrl() {
+        return githubProperties.getUrl();
     }
 }
