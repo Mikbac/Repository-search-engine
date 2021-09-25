@@ -19,7 +19,7 @@ public class OrganizationRepositoryImpl extends AbstractGitHubApiRepository impl
     public int getRepositoriesQuantity(final String organizationName) {
         log.info("[getRepositoriesQuantity] -- get repositories quantity for organizationName: {} ", () -> organizationName);
 
-        final String url = getGithubApiUrl() + organizationName;
+        final String url = getApiUrl(organizationName, null);
         OrganizationModel organizationModel = null;
 
         try {
@@ -29,10 +29,6 @@ public class OrganizationRepositoryImpl extends AbstractGitHubApiRepository impl
         }
 
         return organizationModel != null ? organizationModel.getPublicRepos() : 0;
-    }
-
-    private String getGithubApiUrl() {
-        return githubProperties.getUrl();
     }
 
 }

@@ -1,7 +1,9 @@
 package pl.mikbac.search_engine.spring.repository.impl;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 import pl.mikbac.search_engine.spring.property.GithubProperties;
 
 import javax.annotation.Resource;
@@ -13,13 +15,24 @@ import javax.annotation.Resource;
 public abstract class AbstractGitHubApiRepository {
 
     @Resource
-    private RestTemplateBuilder restTemplateBuilder;
+    protected GithubProperties githubProperties;
 
     @Resource
-    protected GithubProperties githubProperties;
+    private RestTemplateBuilder restTemplateBuilder;
 
     protected RestTemplate getGitHubRestTemplate() {
         return restTemplateBuilder.basicAuthentication(githubProperties.getUsername(), githubProperties.getToken()).build();
     }
 
+    protected String getApiUrl(final String additionalPath, final MultiValueMap<String, String> queryParams) {
+        return UriComponentsBuilder
+                .fromUriString(getGithubApiBaseUrl(additionalPath))
+                .queryParams(queryParams)
+                .build()
+                .toUriString();
+    }
+
+    private String getGithubApiBaseUrl(final String additionalPath) {
+        return githubProperties.getUrl() + additionalPath;
+    }
 }
