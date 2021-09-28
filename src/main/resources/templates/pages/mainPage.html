@@ -19,8 +19,13 @@
             <button type="submit" form="repositoryForm" class="btn btn-primary btn-lg btn-block"
                     th:text="#{main.page.body.repository.search.text}"></button>
             <div class="mt-4 result">
-                <span th:text="#{main.page.body.repository.name.text}"></span>&nbsp;<span class="answer"
-                                                                                          th:text="${repositoryName}"></span>
+                <div th:if= "${not #strings.isEmpty(repositoryName)}">
+                    <span th:text="#{main.page.body.repository.name.text}"></span>&nbsp;<span class="answer"
+                                                                                              th:text="${repositoryName}"></span>
+                </div>
+                <div th:if= "${not #strings.isEmpty(message)}">
+                    <span class="alert alert-danger" th:text="${message}"></span>
+                </div>
             </div>
         </div>
     </div>

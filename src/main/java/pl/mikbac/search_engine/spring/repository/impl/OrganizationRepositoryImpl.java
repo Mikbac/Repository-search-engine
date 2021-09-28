@@ -17,7 +17,7 @@ public class OrganizationRepositoryImpl extends AbstractGitHubApiRepository impl
 
     @Override
     public int getRepositoriesQuantity(final String organizationName) {
-        log.info("[getRepositoriesQuantity] -- get repositories quantity for organizationName: {} ", () -> organizationName);
+        log.info("Get repositories quantity for organizationName: {} ", () -> organizationName);
 
         final String url = getApiUrl(organizationName, null);
         OrganizationModel organizationModel = null;

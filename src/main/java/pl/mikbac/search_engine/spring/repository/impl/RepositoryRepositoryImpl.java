@@ -24,7 +24,7 @@ public class RepositoryRepositoryImpl extends AbstractGitHubApiRepository implem
 
     @Override
     public List<RepositoryModel> getRepositories(final String organizationName, final int pagesNumber) {
-        log.info("[getRepositories] -- get repositories for organizationName: {}", () -> organizationName);
+        log.info("Get repositories for organizationName: {}", () -> organizationName);
 
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<>();
         queryParams.add(PER_PAGE, String.valueOf(pagesNumber));

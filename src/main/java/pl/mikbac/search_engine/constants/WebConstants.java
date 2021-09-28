@@ -24,6 +24,12 @@ public interface WebConstants {
         interface Attributes {
             String REPOSITORY_NAME = "repositoryName";
             String ORGANIZATION_NAME = "organizationName";
+            String MESSAGE = "message";
+        }
+
+        interface Messages {
+            String API_RATE_LIMIT_EXCEPTION = "main.page.body.repository.search.exception.api.rate.limit";
+            String REPOSITORY_NOT_FOUND_EXCEPTION = "main.page.body.repository.search.exception.repository.not.found";
         }
     }
 
