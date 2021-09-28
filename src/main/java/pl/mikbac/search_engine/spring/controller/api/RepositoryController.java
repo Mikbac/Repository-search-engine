@@ -35,7 +35,6 @@ public class RepositoryController {
     private RepositoryFacade repositoryFacade;
 
     @GetMapping(value = LAST_MODIFIED_REPOSITORY, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
     public ResponseEntity<RepositoryData> getLastModifiedRepository(@PathVariable final String organizationName) {
         log.info("Last Modified Repository for organizationName: {}", () -> organizationName);
         try {
