@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import pl.mikbac.search_engine.constants.EntityConstants.Repository;
-import pl.mikbac.search_engine.model.Model;
+import pl.mikbac.search_engine.model.AbstractModel;
 
 import javax.persistence.Table;
 import java.io.Serializable;
@@ -25,7 +25,7 @@ import java.util.Objects;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Table(name = Repository.TABLE)
-public class RepositoryModel extends Model implements Serializable {
+public class RepositoryModel extends AbstractModel implements Serializable {
 
     @JsonProperty(Repository.NAME)
     private String repositoryName;
@@ -46,8 +46,7 @@ public class RepositoryModel extends Model implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         RepositoryModel that = (RepositoryModel) o;
-        return repositoryName.equals(that.repositoryName) &&
-                lastUpdate.equals(that.lastUpdate);
+        return repositoryName.equals(that.repositoryName);
     }
 
     @Override

@@ -7,5 +7,5 @@ import javax.persistence.MappedSuperclass;
  */
 
 @MappedSuperclass
-public class Model {
+public class AbstractModel {
 }
