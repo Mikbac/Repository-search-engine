@@ -11,6 +11,7 @@ import pl.mikbac.search_engine.spring.converter.Converter;
 
 @Service
 public class RepositoryConverter implements Converter<RepositoryData, RepositoryModel> {
+
     @Override
     public RepositoryData convert(RepositoryModel model) {
         return RepositoryData.builder()

@@ -23,6 +23,7 @@ public class RepositoryServiceImpl implements RepositoryService {
 
     @Resource
     private OrganizationRepository organizationRepository;
+
     @Resource
     private RepositoryRepository repositoryRepository;
 
