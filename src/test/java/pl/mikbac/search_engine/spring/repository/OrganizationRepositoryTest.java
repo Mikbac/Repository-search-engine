@@ -31,14 +31,14 @@ public class OrganizationRepositoryTest {
     }
 
     @Test
-    public void readNumberOfRepositoriesWhenOrganizationNameIsAllegro() {
+    public void read_number_of_repositories_when_organization_name_is_Allegro() {
         int pagesNumber;
         pagesNumber = organizationRepository.getRepositoriesQuantity("Allegro");
         assertTrue(pagesNumber != 0);
     }
 
     @Test
-    public void readNumberOfRepositoriesWhenOrganizationNameIsALLEGRO() {
+    public void read_number_of_repositories_when_organization_name_is_ALLEGRO() {
         int pagesNumber;
         pagesNumber = organizationRepository.getRepositoriesQuantity("ALLEGRO");
         assertTrue(pagesNumber != 0);

@@ -34,21 +34,21 @@ public class RepositoryRepositoryTest {
     }
 
     @Test
-    public void getRepositoryWhenOrganizationNameIsAllegro() {
+    public void get_repository_when_organization_name_is_Allegro() {
         List<RepositoryModel> repositories;
         repositories = repositoryRepository.getRepositories("Allegro", 1);
         assertNotNull(repositories);
     }
 
     @Test
-    public void getRepositoryWhenOrganizationNameIsallegro() {
+    public void get_repository_when_organization_name_is_allegro() {
         List<RepositoryModel> repositories;
         repositories = repositoryRepository.getRepositories("allegro", 100);
         assertNotNull(repositories);
     }
 
     @Test
-    public void getRepositoryWhenOrganizationNameIsALLEGRO() {
+    public void get_repository_when_organization_name_is_ALLEGRO() {
         List<RepositoryModel> repositories;
         repositories = repositoryRepository.getRepositories("ALLEGRO", 15);
         assertNotNull(repositories);

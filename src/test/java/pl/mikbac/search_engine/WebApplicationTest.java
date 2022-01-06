@@ -22,7 +22,7 @@ public class WebApplicationTest {
     RepositoryController repositoryController;
 
     @Test
-    public void contextLoads() {
+    public void context_loads() {
         assertThat(repositoryController).isNotNull();
     }
 

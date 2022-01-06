@@ -24,17 +24,17 @@ public class RepositoryServiceTest {
     private RepositoryService repositoryService;
 
     @Test
-    public void getAllRepositoriesWhenOrganizationNameIsAllegro() throws Exception {
+    public void get_all_repositories_when_organization_name_is_Allegro() throws Exception {
         assertNotNull(repositoryService.getAllRepositories("Allegro"));
     }
 
     @Test
-    public void getAllRepositoriesWhenOrganizationNameIsallegro() throws Exception {
+    public void get_all_repositories_when_organization_name_is_allegro() throws Exception {
         assertNotNull(repositoryService.getAllRepositories("allegro"));
     }
 
     @Test
-    public void getAllRepositoriesWhenOrganizationNameIsALLEGRO() throws Exception {
+    public void get_all_repositories_when_organization_name_is_ALLEGRO() throws Exception {
         assertNotNull(repositoryService.getAllRepositories("ALLEGRO"));
     }
 

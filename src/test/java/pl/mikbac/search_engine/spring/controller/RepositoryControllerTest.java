@@ -28,7 +28,7 @@ public class RepositoryControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    public void getRepositoryWhenOrganizationNameIsAllegro() throws Exception {
+    public void get_repository_when_organization_name_is_Allegro() throws Exception {
         this.mockMvc.perform(get("/api/repositories/last-modified/Allegro")
                         .contentType(APPLICATION_JSON_VALUE))
                 .andExpect(status().isOk())
@@ -36,7 +36,7 @@ public class RepositoryControllerTest {
     }
 
     @Test
-    public void getRepositoryWhenOrganizationNameIsallegro() throws Exception {
+    public void get_repository_when_organization_name_is_allegro() throws Exception {
         this.mockMvc.perform(get("/api/repositories/last-modified/allegro")
                         .contentType(APPLICATION_JSON_VALUE))
                 .andExpect(status().isOk())
@@ -44,7 +44,7 @@ public class RepositoryControllerTest {
     }
 
     @Test
-    public void getRepositoryWhenOrganizationNameIsALLEGRO() throws Exception {
+    public void get_repository_when_organization_name_is_ALLEGRO() throws Exception {
         this.mockMvc.perform(get("/api/repositories/last-modified/ALLEGRO")
                         .contentType(APPLICATION_JSON_VALUE))
                 .andExpect(status().isOk())
